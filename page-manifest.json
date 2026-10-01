@@ -1,0 +1,410 @@
+{
+  "built_pages": 81,
+  "pages": [
+    {
+      "url": "/",
+      "title": "California AgTech Alliance",
+      "section": "home"
+    },
+    {
+      "url": "/about/",
+      "title": "About",
+      "section": "about"
+    },
+    {
+      "url": "/workforce/",
+      "title": "Workforce Development",
+      "section": "work"
+    },
+    {
+      "url": "/entrepreneurship/",
+      "title": "Entrepreneurship, Commercialization & Adoption",
+      "section": "work"
+    },
+    {
+      "url": "/network/",
+      "title": "Statewide Network & Collaboration",
+      "section": "work"
+    },
+    {
+      "url": "/workforce/partner-programs/",
+      "title": "Partner & Regional Programs | Workforce Development",
+      "section": "work"
+    },
+    {
+      "url": "/entrepreneurship/partner-programs/",
+      "title": "Partner & Regional Programs | Entrepreneurship, Commercialization & Adoption",
+      "section": "work"
+    },
+    {
+      "url": "/regions/bay-area/",
+      "title": "Bay Area",
+      "section": "regions"
+    },
+    {
+      "url": "/regions/capital/",
+      "title": "Capital",
+      "section": "regions"
+    },
+    {
+      "url": "/regions/central-coast/",
+      "title": "Central Coast",
+      "section": "regions"
+    },
+    {
+      "url": "/regions/central-san-joaquin/",
+      "title": "Central San Joaquin",
+      "section": "regions"
+    },
+    {
+      "url": "/regions/kern-county/",
+      "title": "Kern County",
+      "section": "regions"
+    },
+    {
+      "url": "/regions/northern-san-joaquin/",
+      "title": "Northern San Joaquin",
+      "section": "regions"
+    },
+    {
+      "url": "/regions/north-state/",
+      "title": "North State",
+      "section": "regions"
+    },
+    {
+      "url": "/regions/redwood/",
+      "title": "Redwood",
+      "section": "regions"
+    },
+    {
+      "url": "/regions/southern-border/",
+      "title": "Southern Border",
+      "section": "regions"
+    },
+    {
+      "url": "/workforce/agricultural-workforce-development/",
+      "title": "California Agricultural Workforce Development Program",
+      "section": "work"
+    },
+    {
+      "url": "/workforce/farm-robotics-challenge/",
+      "title": "Farm Robotics Challenge",
+      "section": "work"
+    },
+    {
+      "url": "/workforce/farm-robotics-academy/",
+      "title": "Farm Robotics Academy",
+      "section": "work"
+    },
+    {
+      "url": "/workforce/drones-uplifting-california-communities/",
+      "title": "Drones Uplifting California Communities",
+      "section": "work"
+    },
+    {
+      "url": "/workforce/farms-field-days/",
+      "title": "FARMS Program & Field Days",
+      "section": "work"
+    },
+    {
+      "url": "/entrepreneurship/build/",
+      "title": "UC ANR Build",
+      "section": "work"
+    },
+    {
+      "url": "/entrepreneurship/connect/",
+      "title": "UC ANR Connect",
+      "section": "work"
+    },
+    {
+      "url": "/entrepreneurship/innovation-grants/",
+      "title": "Innovation Grants",
+      "section": "work"
+    },
+    {
+      "url": "/audiences/entrepreneurs-startups/",
+      "title": "Entrepreneurs & Startups",
+      "section": "audiences"
+    },
+    {
+      "url": "/audiences/farmers-agricultural-operations/",
+      "title": "Farmers & Agricultural Operations",
+      "section": "audiences"
+    },
+    {
+      "url": "/audiences/farmworkers-adult-learners-career-changers/",
+      "title": "Farmworkers, Adult Learners & Career Changers",
+      "section": "audiences"
+    },
+    {
+      "url": "/audiences/students-educators-workforce-partners/",
+      "title": "Students, Educators & Workforce Partners",
+      "section": "audiences"
+    },
+    {
+      "url": "/audiences/regional-community-economic-development-partners/",
+      "title": "Regional, Community & Economic Development Partners",
+      "section": "audiences"
+    },
+    {
+      "url": "/audiences/entrepreneur-support-organizations/",
+      "title": "Entrepreneur Support Organizations",
+      "section": "audiences"
+    },
+    {
+      "url": "/audiences/investors-funders/",
+      "title": "Investors & Funders",
+      "section": "audiences"
+    },
+    {
+      "url": "/audiences/industry-policy-leaders/",
+      "title": "Industry & Policy Leaders",
+      "section": "audiences"
+    },
+    {
+      "url": "/about/governance/",
+      "title": "Governance",
+      "section": "about"
+    },
+    {
+      "url": "/network/connections-referrals/",
+      "title": "Connections & Referrals",
+      "section": "work"
+    },
+    {
+      "url": "/network/investor-network/",
+      "title": "Investor Network",
+      "section": "work"
+    },
+    {
+      "url": "/network/working-groups-meetings/",
+      "title": "Working Groups & Partner Meetings",
+      "section": "work"
+    },
+    {
+      "url": "/events-opportunities/",
+      "title": "Events & Opportunities",
+      "section": "events"
+    },
+    {
+      "url": "/resources/",
+      "title": "Resource Library",
+      "section": "resources"
+    },
+    {
+      "url": "/stories/",
+      "title": "Stories",
+      "section": "stories"
+    },
+    {
+      "url": "/newsroom/",
+      "title": "Newsroom",
+      "section": "newsroom"
+    },
+    {
+      "url": "/directory/",
+      "title": "Network Directory / Map",
+      "section": "resources"
+    },
+    {
+      "url": "/testbeds/",
+      "title": "Testbed Map",
+      "section": "resources"
+    },
+    {
+      "url": "/startups/",
+      "title": "Startup & Alumni Directory",
+      "section": "resources"
+    },
+    {
+      "url": "/about/team/",
+      "title": "Team",
+      "section": "about"
+    },
+    {
+      "url": "/storytelling-toolkit/",
+      "title": "Storytelling Toolkit",
+      "section": "resources"
+    },
+    {
+      "url": "/contact/",
+      "title": "Contact",
+      "section": "contact"
+    },
+    {
+      "url": "/accessibility/",
+      "title": "Accessibility",
+      "section": "policy"
+    },
+    {
+      "url": "/privacy/",
+      "title": "Privacy Policy",
+      "section": "policy"
+    },
+    {
+      "url": "/terms/",
+      "title": "Terms of Use",
+      "section": "policy"
+    },
+    {
+      "url": "/events/annual-convening-2026/",
+      "title": "2026 Annual Convening",
+      "section": "events"
+    },
+    {
+      "url": "/stories/drone-field-day/",
+      "title": "What growers learned at a drone field day.",
+      "section": "stories"
+    },
+    {
+      "url": "/stories/hartnell-cohort/",
+      "title": "A Hartnell cohort finishes its first season.",
+      "section": "stories"
+    },
+    {
+      "url": "/stories/soil-sensors/",
+      "title": "Testing soil sensors on a Central Coast ranch.",
+      "section": "stories"
+    },
+    {
+      "url": "/stories/three-startups/",
+      "title": "Three startups, one strawberry field.",
+      "section": "stories"
+    },
+    {
+      "url": "/stories/job-board/",
+      "title": "How a region built its first AgTech job board.",
+      "section": "stories"
+    },
+    {
+      "url": "/stories/robotics/",
+      "title": "Notes from the Farm Robotics Challenge.",
+      "section": "stories"
+    },
+    {
+      "url": "/stories/irrigation-data/",
+      "title": "Sharing irrigation data across a watershed.",
+      "section": "stories"
+    },
+    {
+      "url": "/stories/customer-discovery/",
+      "title": "Turning a farm problem into a business question.",
+      "section": "stories"
+    },
+    {
+      "url": "/stories/educators/",
+      "title": "Connecting educators with agricultural employers.",
+      "section": "stories"
+    },
+    {
+      "url": "/stories/investor-connections/",
+      "title": "Building relationships between founders and investors.",
+      "section": "stories"
+    },
+    {
+      "url": "/stories/field-days/",
+      "title": "Learning in the field, together.",
+      "section": "stories"
+    },
+    {
+      "url": "/stories/innovation-grants/",
+      "title": "Supporting the next step in agricultural innovation.",
+      "section": "stories"
+    },
+    {
+      "url": "/stories/quarterly-meetings/",
+      "title": "What partners bring to a statewide conversation.",
+      "section": "stories"
+    },
+    {
+      "url": "/newsroom/grants/",
+      "title": "Alliance announces Innovation Grant recipients.",
+      "section": "newsroom"
+    },
+    {
+      "url": "/newsroom/robotics/",
+      "title": "UC ANR and regional partners launch Farm Robotics Challenge.",
+      "section": "newsroom"
+    },
+    {
+      "url": "/newsroom/convening/",
+      "title": "Annual Convening 2027 dates and location announced.",
+      "section": "newsroom"
+    },
+    {
+      "url": "/newsroom/hartnell/",
+      "title": "Hartnell College joins the Alliance workforce network.",
+      "section": "newsroom"
+    },
+    {
+      "url": "/newsroom/build/",
+      "title": "UC ANR Build opens applications for its next cohort.",
+      "section": "newsroom"
+    },
+    {
+      "url": "/newsroom/roadmap/",
+      "title": "Alliance publishes its Innovation Roadmap.",
+      "section": "newsroom"
+    },
+    {
+      "url": "/newsroom/field-days/",
+      "title": "Partners announce a new season of agricultural field days.",
+      "section": "newsroom"
+    },
+    {
+      "url": "/newsroom/directory/",
+      "title": "Alliance introduces its statewide Network Directory.",
+      "section": "newsroom"
+    },
+    {
+      "url": "/events/agricultural-technology-validation-workshop/",
+      "title": "Agricultural technology validation workshop",
+      "section": "events"
+    },
+    {
+      "url": "/events/bringing-agricultural-technology-into-the-classroom/",
+      "title": "Bringing agricultural technology into the classroom",
+      "section": "events"
+    },
+    {
+      "url": "/events/agricultural-technology-field-day/",
+      "title": "Agricultural technology field day",
+      "section": "events"
+    },
+    {
+      "url": "/events/precision-irrigation-webinar/",
+      "title": "Precision irrigation webinar",
+      "section": "events"
+    },
+    {
+      "url": "/directory/coastal/",
+      "title": "Coastal AgTech Studio",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/research/",
+      "title": "Field Research Collaborative",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/harvest/",
+      "title": "Harvest Investment Network",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/community/",
+      "title": "North State Learning Partnership",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/growers/",
+      "title": "Valley Growers Council",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/valley/",
+      "title": "Valley Skills Center",
+      "section": "directory"
+    }
+  ]
+}

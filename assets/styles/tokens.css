@@ -1,0 +1,270 @@
+/* =============================================================
+   California AgTech Alliance — Color & Type Foundations
+   Ported from the design-system handoff (colors_and_type.css).
+   Source: California AgTech Alliance_Brand.pdf, Master Comms doc.
+   ============================================================= */
+
+/* ---------- FONT FACES — Atyp Display + Atyp Text ----------------
+   Brand fonts (licensed, user-supplied). Paths resolve relative to
+   this CSS file's location (project root). */
+@font-face { font-family: 'Atyp Display'; font-style: normal; font-weight: 100; font-display: swap; src: url('fonts/AtypDisplay-Thin.ttf') format('truetype'); }
+@font-face { font-family: 'Atyp Display'; font-style: italic; font-weight: 100; font-display: swap; src: url('fonts/AtypDisplay-ThinItalic.ttf') format('truetype'); }
+@font-face { font-family: 'Atyp Display'; font-style: normal; font-weight: 300; font-display: swap; src: url('fonts/AtypDisplay-Light.ttf') format('truetype'); }
+@font-face { font-family: 'Atyp Display'; font-style: italic; font-weight: 300; font-display: swap; src: url('fonts/AtypDisplay-LightItalic.ttf') format('truetype'); }
+@font-face { font-family: 'Atyp Display'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/AtypDisplay-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Atyp Display'; font-style: italic; font-weight: 400; font-display: swap; src: url('fonts/AtypDisplay-Italic.ttf') format('truetype'); }
+@font-face { font-family: 'Atyp Display'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/AtypDisplay-Medium.ttf') format('truetype'); }
+@font-face { font-family: 'Atyp Display'; font-style: italic; font-weight: 500; font-display: swap; src: url('fonts/AtypDisplay-MediumItalic.ttf') format('truetype'); }
+@font-face { font-family: 'Atyp Display'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/AtypDisplay-Semibold.ttf') format('truetype'); }
+@font-face { font-family: 'Atyp Display'; font-style: italic; font-weight: 600; font-display: swap; src: url('fonts/AtypDisplay-SemiboldItalic.ttf') format('truetype'); }
+@font-face { font-family: 'Atyp Display'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonts/AtypDisplay-Bold.ttf') format('truetype'); }
+@font-face { font-family: 'Atyp Display'; font-style: italic; font-weight: 700; font-display: swap; src: url('fonts/AtypDisplay-BoldItalic.ttf') format('truetype'); }
+
+@font-face { font-family: 'Atyp Text'; font-style: normal; font-weight: 100; font-display: swap; src: url('fonts/AtypText-Thin.ttf') format('truetype'); }
+@font-face { font-family: 'Atyp Text'; font-style: italic; font-weight: 100; font-display: swap; src: url('fonts/AtypText-ThinItalic.ttf') format('truetype'); }
+@font-face { font-family: 'Atyp Text'; font-style: normal; font-weight: 300; font-display: swap; src: url('fonts/AtypText-Light.ttf') format('truetype'); }
+@font-face { font-family: 'Atyp Text'; font-style: italic; font-weight: 300; font-display: swap; src: url('fonts/AtypText-LightItalic.ttf') format('truetype'); }
+@font-face { font-family: 'Atyp Text'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/AtypText-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Atyp Text'; font-style: italic; font-weight: 400; font-display: swap; src: url('fonts/AtypText-Italic.ttf') format('truetype'); }
+@font-face { font-family: 'Atyp Text'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/AtypText-Medium.ttf') format('truetype'); }
+@font-face { font-family: 'Atyp Text'; font-style: italic; font-weight: 500; font-display: swap; src: url('fonts/AtypText-MediumItalic.ttf') format('truetype'); }
+@font-face { font-family: 'Atyp Text'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/AtypText-Semibold.ttf') format('truetype'); }
+@font-face { font-family: 'Atyp Text'; font-style: italic; font-weight: 600; font-display: swap; src: url('fonts/AtypText-SemiboldItalic.ttf') format('truetype'); }
+@font-face { font-family: 'Atyp Text'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonts/AtypText-Bold.ttf') format('truetype'); }
+@font-face { font-family: 'Atyp Text'; font-style: italic; font-weight: 700; font-display: swap; src: url('fonts/AtypText-BoldItalic.ttf') format('truetype'); }
+
+/* Mono — JetBrains Mono carries the metadata role (eyebrows, IDs, slide-foot meta). */
+
+:root {
+  /* ===========  CORE BRAND PALETTE  =========== */
+  --cata-navy:          #0B2131;
+  --cata-navy-deep:     #071824;
+  --cata-navy-tint:     #112a3d;
+
+  --cata-lime:          #B3FF00;
+  --cata-lime-soft:     #C8FF4D;
+  --cata-lime-deep:     #8ECC00;
+
+  --cata-teal:          #006D84;
+  --cata-teal-deep:     #005064;
+  --cata-teal-tint:     #2A8FA3;
+
+  --cata-mint:          #ADF6D2;
+  --cata-mint-deep:     #7DD9AE;
+
+  --cata-cream:         #F3F3EF;
+  --cata-paper:         #FAFAF7;
+
+  /* ===========  GREYS  =========== */
+  --cata-ink:           #0B2131;
+  --cata-ink-2:         #2C4150;
+  --cata-ink-3:         #5C6C78;
+  --cata-rule:          #DCDFD9;
+  --cata-rule-dark:     #1E3344;
+
+  /* ===========  SEMANTIC TOKENS — LIGHT (default)  =========== */
+  --bg:                 var(--cata-cream);
+  --bg-elevated:        #FFFFFF;
+  --bg-inverse:         var(--cata-navy);
+
+  --fg:                 var(--cata-ink);
+  --fg-2:               var(--cata-ink-2);
+  --fg-3:               var(--cata-ink-3);
+  --fg-inverse:         var(--cata-cream);
+
+  --accent:             var(--cata-lime);
+  --accent-deep:        var(--cata-lime-deep);
+  --accent-on:          var(--cata-navy);
+
+  --secondary:          var(--cata-teal);
+  --secondary-soft:     var(--cata-mint);
+
+  --rule:               var(--cata-rule);
+  --rule-strong:        var(--cata-ink);
+
+  --link:               var(--cata-teal);
+  --link-hover:         var(--cata-teal-deep);
+
+  --focus-ring:         var(--cata-lime);
+
+  /* ===========  RADII  =========== */
+  --radius-0:  0px;
+  --radius-1:  2px;
+  --radius-2:  4px;
+  --radius-3:  8px;
+  --radius-pill: 999px;
+
+  /* ===========  SPACING (4-pt scale)  =========== */
+  --s-1:  4px;  --s-2:  8px;  --s-3: 12px;  --s-4: 16px;
+  --s-5: 24px;  --s-6: 32px;  --s-7: 48px;  --s-8: 64px;
+  --s-9: 96px;  --s-10: 128px;
+
+  /* ===========  ELEVATION (rare — brand is flat)  =========== */
+  --shadow-1: 0 1px 2px rgba(11, 33, 49, 0.06);
+  --shadow-2: 0 6px 18px -8px rgba(11, 33, 49, 0.18);
+  --shadow-3: 0 24px 60px -20px rgba(11, 33, 49, 0.30);
+
+  /* ===========  MOTION  =========== */
+  --ease-out:     cubic-bezier(0.2, 0.7, 0.2, 1); /* @kind other */
+  --ease-in-out:  cubic-bezier(0.5, 0.0, 0.2, 1); /* @kind other */
+  --dur-fast:     120ms; /* @kind other */
+  --dur-base:     220ms; /* @kind other */
+  --dur-slow:     420ms; /* @kind other */
+
+  /* ===========  TYPE  =========== */
+  --font-display: 'Atyp Display', system-ui, sans-serif;
+  --font-text:    'Atyp Text', 'Helvetica Neue', system-ui, sans-serif;
+  --font-mono:    ui-monospace, 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+
+  --t-eyebrow:   12px;
+  --t-caption:   13px;
+  --t-body-sm:   14px;
+  --t-body:      16px;
+  --t-body-lg:   18px;
+  --t-h6:        20px;
+  --t-h5:        24px;
+  --t-h4:        32px;
+  --t-h3:        44px;
+  --t-h2:        60px;
+  --t-h1:        84px;
+  --t-display:  112px;
+
+  --lh-tight:    1.02; /* @kind font */
+  --lh-snug:     1.12; /* @kind font */
+  --lh-cozy:     1.25; /* @kind font */
+  --lh-body:     1.5; /* @kind font */
+  --lh-loose:    1.7; /* @kind font */
+
+  --ls-display:  -0.02em;
+  --ls-tight:    -0.01em;
+  --ls-eyebrow:  0.14em;
+}
+
+/* ===========  SURFACE INVERSIONS (data-surface attribute)  ===========
+   Apply to any block to flip tokens without changing component CSS. */
+[data-surface="dark"] {
+  --bg:           var(--cata-navy);
+  --bg-elevated:  var(--cata-navy-tint);
+  --fg:           var(--cata-cream);
+  --fg-2:         #B6C5D1;
+  --fg-3:         #7C95A6;
+  --rule:         var(--cata-rule-dark);
+  --link:         var(--cata-lime);
+  --link-hover:   var(--cata-lime-soft);
+}
+[data-surface="mint"] {
+  --bg:    var(--cata-mint);
+  --bg-elevated: #C7FADF;
+  --fg:    var(--cata-navy);
+  --fg-2:  #1E4458;
+  --fg-3:  #4F6E7E;
+  --rule:  rgba(11, 33, 49, 0.18);
+  --link:  var(--cata-navy);
+  --link-hover: var(--cata-teal);
+}
+[data-surface="teal"] {
+  --bg: var(--cata-teal);
+  --bg-elevated: #007F99;
+  --fg: var(--cata-cream);
+  --fg-2: #C7E4EC;
+  --fg-3: #94BAC4;
+  --rule: rgba(255, 255, 255, 0.18);
+  --link: var(--cata-lime);
+  --link-hover: var(--cata-mint);
+}
+
+/* ============================================================
+   BASE TYPOGRAPHY
+
+   Three faces, three roles. The system reads as intentional only
+   when each face stays in its lane.
+
+   Atyp Display — RESERVED. Hero headlines, large statements
+   (≥32px section H2), KPI numerals, occasional emphasis. Never
+   card titles, nav, CTAs, or body. Earns its impact by appearing
+   rarely.
+
+   Atyp Text — the workhorse. Default for every structural role:
+   subheads, card titles, news H3s, navigation, CTAs, body, lists,
+   footer links, table cells, region names. Weights: 700 strong
+   card titles · 600 buttons + sub-emphasis · 500 nav + partner
+   names · 400 body + quotes.
+
+   JetBrains Mono — metadata only. Eyebrows, tabular labels,
+   slide-foot meta, code/IDs. Always uppercased with +0.10–0.18em
+   tracking. Never body, never titling.
+   ============================================================ */
+html { font-family: var(--font-text); color: var(--fg); background: var(--bg); }
+body { font: 400 var(--t-body)/var(--lh-body) var(--font-text); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+/* Display — opt-in. Used for hero moments only. */
+.cata-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--t-display);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-display);
+  color: var(--fg);
+  text-wrap: balance;
+}
+
+/* KPI numerals — Display earns its place because the digit forms are
+   part of the brand voice. */
+.cata-numeral {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+/* H1–H6 — Atyp Text by default. Headlines that should escalate
+   to Display must opt in with .cata-display. */
+.cata-h1, .cata-h2, .cata-h3, .cata-h4, .cata-h5, .cata-h6 {
+  font-family: var(--font-text);
+  color: var(--fg);
+  text-wrap: balance;
+}
+.cata-h1 { font-size: var(--t-h1); line-height: var(--lh-tight); font-weight: 700; letter-spacing: -0.012em; }
+.cata-h2 { font-size: var(--t-h2); line-height: var(--lh-snug);  font-weight: 700; letter-spacing: -0.012em; }
+.cata-h3 { font-size: var(--t-h3); line-height: var(--lh-cozy);  font-weight: 700; letter-spacing: -0.008em; }
+.cata-h4 { font-size: var(--t-h4); line-height: var(--lh-cozy);  font-weight: 700; letter-spacing: -0.005em; }
+.cata-h5 { font-size: var(--t-h5); line-height: var(--lh-cozy);  font-weight: 700; }
+.cata-h6 { font-size: var(--t-h6); line-height: var(--lh-cozy);  font-weight: 600; letter-spacing: 0; }
+
+.cata-body-lg { font-size: var(--t-body-lg); line-height: var(--lh-body); text-wrap: pretty; }
+.cata-body    { font-size: var(--t-body); line-height: var(--lh-body); text-wrap: pretty; color: var(--fg-2); }
+.cata-body-sm { font-size: var(--t-body-sm); line-height: var(--lh-body); color: var(--fg-2); }
+.cata-caption { font-size: var(--t-caption); line-height: var(--lh-cozy); color: var(--fg-3); }
+
+/* Eyebrow — JetBrains Mono, ALL CAPS, wide tracking. Metadata role. */
+.cata-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--t-eyebrow);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--fg-3);
+}
+.cata-eyebrow--accent { color: var(--accent); }
+.cata-eyebrow--lime { color: var(--cata-lime); }
+.cata-eyebrow--teal { color: var(--cata-teal); }
+.cata-eyebrow--navy { color: var(--cata-navy); }
+
+code, pre, .cata-mono { font-family: var(--font-mono); font-size: 0.94em; }
+
+a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
+
+::selection { background: var(--cata-lime); color: var(--cata-navy); }
+
+/* Focus ring — always lime, on every surface */
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
