@@ -548,3 +548,9 @@ details.acc .acc__body{padding:0 0 var(--s-5)}.acc__body ul{margin:0}
   body.has-stickybar{padding-bottom:var(--s-8)}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.card:has(a):hover,.goal:has(a):hover,a.logo:hover{transform:none}}
+
+/* ---------- directory profile (Oct 2) ---------- */
+.side-card dt{color:var(--cata-teal)}
+.side-card dd a{color:var(--cata-navy)}
+.offers h3{font-size:19px;margin-bottom:6px}.offers p{margin:0;color:var(--cata-ink-2)}
+.reading__section .who{font-weight:400;margin:0 0 2px}.reading__section .who+p{margin-bottom:4px}
