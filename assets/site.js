@@ -27,6 +27,32 @@
     else if (menu?.classList.contains('is-open')) closeMenu(true);
   });
   window.matchMedia('(max-width: 1100px)').addEventListener('change', () => closeMenu());
+  // Home region finder: pills and county shapes select a region; the matching card shows.
+  document.querySelectorAll('[data-region-finder]').forEach(finder => {
+    const shapes = [...finder.querySelectorAll('path[data-region]')];
+    const select = key => {
+      finder.querySelectorAll('.region-pill').forEach(pill => pill.setAttribute('aria-pressed', String(pill.dataset.region === key)));
+      finder.querySelectorAll('[data-region-panel]').forEach(card => { card.hidden = card.dataset.regionPanel !== key; });
+      shapes.forEach(shape => shape.classList.toggle('is-on', shape.dataset.region === key));
+    };
+    const hover = key => shapes.forEach(shape => shape.classList.toggle('is-hover', !!key && shape.dataset.region === key));
+    finder.querySelectorAll('.region-pill').forEach(pill => pill.addEventListener('click', () => select(pill.dataset.region)));
+    shapes.forEach(shape => {
+      shape.addEventListener('click', () => select(shape.dataset.region));
+      shape.addEventListener('mouseenter', () => hover(shape.dataset.region));
+      shape.addEventListener('mouseleave', () => hover(null));
+    });
+  });
+  // Home calendar: recount "days left" against today so the static page stays current; drop past items.
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  document.querySelectorAll('[data-deadline]').forEach(row => {
+    const [y, m, d] = row.dataset.deadline.split('-').map(Number);
+    const days = Math.round((new Date(y, m - 1, d) - today) / 864e5) + (row.hasAttribute('data-inclusive') ? 1 : 0);
+    if (days < 0) { row.hidden = true; return; }
+    row.querySelector('.deadline__n').textContent = days;
+    row.querySelector('.deadline__label').textContent = days === 1 ? 'Day left' : 'Days left';
+    row.querySelector('.deadline').classList.toggle('is-soon', days <= 7);
+  });
   document.querySelectorAll('[data-tabs]').forEach(group => {
     const tabs = [...group.querySelectorAll('[role="tab"]')];
     const select = tab => {
