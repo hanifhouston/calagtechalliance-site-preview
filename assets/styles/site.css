@@ -354,6 +354,7 @@ details.acc .acc__body{padding:0 0 var(--s-5)}.acc__body ul{margin:0}
 .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s-5)}
 .goal{background:#fff;border:1px solid var(--cata-rule);border-radius:var(--radius-3);padding:var(--s-5);display:flex;flex-direction:column;gap:var(--s-3)}
 .goal .mono{color:var(--cata-teal)}
+.goal .who{font-weight:700;margin:0}.goal .role{font-size:14px;color:var(--cata-ink-3);margin:0}.goal p{margin:0}
 .goal h3{margin:0}
 .goal p{margin:0}
 .goal .text-link{margin-top:auto;padding-top:8px}
