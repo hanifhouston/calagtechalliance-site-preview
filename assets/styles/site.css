@@ -321,6 +321,7 @@ details.acc>summary::-webkit-details-marker{display:none}
 details.acc .acc__body{padding:0 0 var(--s-5)}.acc__body ul{margin:0}
 .s-navy details.acc,.s-navy details.acc:last-of-type{border-color:var(--cata-rule-dark)}
 .logos{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--s-4)}
+.logos--4{grid-template-columns:repeat(4,minmax(0,1fr))}
 .logo{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:110px;padding:var(--s-5) var(--s-4);background:#fff;border:1px solid var(--cata-rule);border-radius:var(--radius-3);text-decoration:none;color:var(--cata-navy);font-size:var(--t-caption);text-align:center}
 .logo img{max-height:52px;width:auto;max-width:100%;object-fit:contain}
 .s-navy .logo{background:var(--cata-cream)}
