@@ -6,7 +6,6 @@
   const closeMenu = (restoreFocus = false) => {
     menu?.classList.remove('is-open');
     toggle?.setAttribute('aria-expanded', 'false');
-    if (toggle) toggle.textContent = 'Menu';
     groups.forEach(group => { group.open = false; });
     if (restoreFocus) toggle?.focus();
   };
@@ -14,7 +13,6 @@
     const open = !menu.classList.contains('is-open');
     menu.classList.toggle('is-open', open);
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.textContent = open ? 'Close' : 'Menu';
   });
   groups.forEach(group => group.addEventListener('toggle', () => {
     if (group.open) groups.filter(other => other !== group).forEach(other => { other.open = false; });
@@ -28,7 +26,7 @@
     if (open) { open.open = false; open.querySelector('summary').focus(); }
     else if (menu?.classList.contains('is-open')) closeMenu(true);
   });
-  window.matchMedia('(max-width: 980px)').addEventListener('change', () => closeMenu());
+  window.matchMedia('(max-width: 1100px)').addEventListener('change', () => closeMenu());
   document.querySelectorAll('[data-tabs]').forEach(group => {
     const tabs = [...group.querySelectorAll('[role="tab"]')];
     const select = tab => {
