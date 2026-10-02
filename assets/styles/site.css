@@ -554,3 +554,4 @@ details.acc .acc__body{padding:0 0 var(--s-5)}.acc__body ul{margin:0}
 .side-card dd a{color:var(--cata-navy)}
 .offers h3{font-size:19px;margin-bottom:6px}.offers p{margin:0;color:var(--cata-ink-2)}
 .reading__section .who{font-weight:400;margin:0 0 2px}.reading__section .who+p{margin-bottom:4px}
+.maps{margin-top:24px}.maps .map iframe{width:100%;height:260px;border:0;border-radius:8px;display:block}.maps .map p{margin:8px 0 0}
