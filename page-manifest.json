@@ -1,5 +1,5 @@
 {
-  "built_pages": 81,
+  "built_pages": 82,
   "pages": [
     {
       "url": "/",
@@ -404,6 +404,11 @@
     {
       "url": "/directory/valley/",
       "title": "Valley Skills Center",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/riot-labs/",
+      "title": "RIoT Labs",
       "section": "directory"
     }
   ]
