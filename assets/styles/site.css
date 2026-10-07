@@ -14,13 +14,14 @@
   --layout-gutter:var(--s-5); /* Layout System: twelve-column grid, 24px gap */
   --section-y:80px;         /* Layout System: 80px sections, 56px on phones */
   --ls-meta:.12em;          /* mono metadata tracking, inside the brand's .10–.18em */
-  /* Filter chips and count badges (sentence H1s, filter sidebars; user 2026-10-04): brand tints, one per facet tone. */
-  --chip-type:var(--cata-mint);                                                 /* type, listing type */
-  --chip-aud:color-mix(in srgb,var(--cata-lime-soft) 55%,var(--cata-paper));    /* audience: a lime tint */
-  --chip-region:color-mix(in srgb,var(--cata-teal-tint) 42%,var(--cata-paper)); /* region: a teal tint */
-  --chip-area:color-mix(in srgb,var(--cata-navy) 15%,var(--cata-paper));        /* area of work, support offered: a navy tint */
+  /* Filter chips and count badges (sentence H1s, filter sidebars): the Oct 4 designs' highlight tints, one per facet tone
+     (user, 2026-10-07 "match my design"; the brand-tint mapping chosen on 2026-10-04 is superseded). */
+  --chip-type:var(--cata-mint);                                                 /* type, listing type, kind */
+  --chip-aud:oklch(0.94 0.11 122);                                              /* audience: pale lime */
+  --chip-region:oklch(0.9 0.055 225);                                           /* region: pale blue */
+  --chip-area:oklch(0.93 0.065 88);                                             /* area of work, support offered: pale sand */
   --chip-support:var(--chip-area);
-  --chip-topic:color-mix(in srgb,var(--cata-mint-deep) 32%,var(--cata-paper))   /* topic: a pale mint */
+  --chip-topic:color-mix(in oklab,var(--cata-teal) 18%,var(--cata-paper));     /* topic: a teal wash */
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:var(--header-h)}
