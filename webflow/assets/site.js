@@ -2093,6 +2093,44 @@
         const sec = ppRoot.querySelector('[data-pp-sec="programs"]'); if (sec) sec.hidden = false;
       }
     }
+    // The Locations map (records._map_embed on the local build; the Oct 6 profile design shows it under the addresses): with a
+    // Google Maps key (window.CATA_MAPS_KEY, written by export_webflow.py from config.json) a styled map with one pin per place;
+    // without one, the design's quiet placeholder panel. Places come from the directory data (coords + city).
+    const locSec = ppRoot.querySelector('[data-pp-sec="locations"]');
+    const places = (org.places || []).filter(p => p && p.coords && p.coords.length === 2);
+    if (locSec && !locSec.hidden && places.length && !locSec.querySelector('.gmap')) {
+      const count = places.length + (places.length === 1 ? ' location' : ' locations');
+      const key = window.CATA_MAPS_KEY;
+      if (!key) {
+        locSec.insertAdjacentHTML('beforeend', '<div class="gmap gmap--pending" role="region" aria-label="Map of locations"><div class="gmap__note"><span class="mono">Map · ' + count + '</span><p class="small">Appears when a Google Maps key is added to the build.</p></div></div>');
+      } else {
+        const id = 'gmap-' + slug;
+        locSec.insertAdjacentHTML('beforeend', '<div class="gmap-wrap" role="region" aria-label="Map of locations"><div class="gmap" id="' + id + '"></div></div>');
+        const STYLE = [{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"color":"#cfe3e9"}]},{"featureType":"landscape","stylers":[{"color":"#f3f3ef"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#ffffff"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#dcdfd9"}]},{"elementType":"labels.text.fill","stylers":[{"color":"#5c6c78"}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#dcdfd9"}]}];
+        window.__allianceMaps = (window.__allianceMaps || []);
+        window.__allianceMaps.push({ id, pins: places.map(p => ({ lat: p.coords[1], lng: p.coords[0], title: org.name + (p.city ? ' · ' + p.city : ''), html: '<strong>' + esc(org.name) + '</strong>' + (p.city ? '<br>' + esc(p.city) : '') })) });
+        window.initAllianceMaps = window.initAllianceMaps || function () {
+          const G = google.maps, iw = new G.InfoWindow();
+          window.__allianceMaps.forEach(m => {
+            const el = document.getElementById(m.id); if (!el || el.dataset.done) return; el.dataset.done = '1';
+            const map = new G.Map(el, { zoom: 12, disableDefaultUI: true, zoomControl: true, styles: STYLE, backgroundColor: '#f3f3ef' });
+            const b = new G.LatLngBounds();
+            m.pins.forEach(p => {
+              const pos = new G.LatLng(p.lat, p.lng);
+              const mk = new G.Marker({ position: pos, map, title: p.title });
+              mk.addListener('click', () => { iw.setContent(p.html); iw.open({ anchor: mk, map }); });
+              b.extend(pos);
+            });
+            if (m.pins.length > 1) map.fitBounds(b, 80); else { map.setCenter(b.getCenter()); map.setZoom(14); }
+          });
+        };
+        if (!document.querySelector('script[data-cata-gmaps]')) {
+          const sc = document.createElement('script'); sc.async = true; sc.defer = true; sc.setAttribute('data-cata-gmaps', '');
+          sc.src = 'https://maps.googleapis.com/maps/api/js?key=' + encodeURIComponent(key) + '&callback=initAllianceMaps';
+          document.body.appendChild(sc);
+        } else if (window.google && window.google.maps) window.initAllianceMaps();
+      }
+    }
   })();
 })();
 
