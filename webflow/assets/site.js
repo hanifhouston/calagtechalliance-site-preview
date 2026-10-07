@@ -1,5 +1,8 @@
 /* Shared progressive enhancement; all ordinary page links work without JS. */
 (() => {
+  // Webflow copy: the builder drops the hidden attribute; export_webflow.py carries it as data-cata-hidden.
+  document.querySelectorAll('[data-cata-hidden]').forEach(el => { el.hidden = true; el.removeAttribute('data-cata-hidden'); });
+  const optOf = i => i.closest('.facet__opt') || i.closest('[data-kind]') || i.closest('label');  // the option row (Webflow nests its own label inside)
   // Site navigation (site_builder/navigation.py; the user's design of 2026-10-05). Each section's name becomes a button that
   // opens its panel (without the script it's a link to the section's overview page). One panel at a time; Escape, a click
   // outside or on the scrim, or focus leaving the panel closes it. Under 1200px the Menu button opens the drawer, where the
@@ -241,7 +244,7 @@
     const live = () => groups.filter(g => !g.hidden);  // the shown tab's groups
     const group = key => live().find(g => g.dataset.facet === key);
     const allInputs = key => [...(group(key)?.querySelectorAll('[data-facet-input]') || [])];
-    const inputs = key => allInputs(key).filter(i => !i.closest('label').hidden);
+    const inputs = key => allInputs(key).filter(i => !optOf(i).hidden);
     const expand = (g, open) => { head(g).setAttribute('aria-expanded', String(open)); panel(g).hidden = !open; };
     let bar = false, railOpen = null, dropdown = null;
     // The reading order follows the layout (WCAG 1.3.2, 2.4.3): the rail reads search, the "Filters" heading with Clear
@@ -306,16 +309,16 @@
       // Counts (user, 2026-10-06): countFor(key, value) is how many results that choice would give with the other filters
       // as they are; a choice that would give none is greyed out and can't be checked (a checked one can still be cleared).
       setCounts: countFor => live().forEach(g => inputs(g.dataset.facet).forEach(i => {
-        const slot = i.closest('label').querySelector('[data-facet-n]');
+        const slot = optOf(i).querySelector('[data-facet-n]');
         if (!slot || !i.value) return;
         const n = countFor(g.dataset.facet, i.value), off = !n && !i.checked;
         slot.innerHTML = n + `<span class="sr-only"> ${n === 1 ? 'match' : 'matches'}</span>`;
         i.disabled = off && i !== document.activeElement;  // never the one just unchecked: disabling it would drop focus to the page
-        i.closest('label').classList.toggle('is-off', off);
+        optOf(i).classList.toggle('is-off', off);
       })),
       // Show only some options (e.g. the types under the chosen listing types); hidden ones are unchecked.
       showOptions: (key, keep) => allInputs(key).forEach(i => {
-        const label = i.closest('label'), on = keep(label, i);
+        const label = optOf(i), on = keep(label, i);
         label.hidden = !on;
         if (!on) i.checked = false;
       }),
@@ -1531,7 +1534,7 @@
     const want = (key, raw) => {
       const v = String(raw).trim().toLowerCase();
       const hit = [...dirWrap.querySelectorAll(`[data-facet-set="${tab}"][data-facet="${key}"] [data-facet-input]`)]
-        .find(i => i.value.toLowerCase() === v || i.closest('label').textContent.trim().toLowerCase() === v);
+        .find(i => i.value.toLowerCase() === v || optOf(i).textContent.trim().toLowerCase() === v);
       if (hit) (wanted[key] = wanted[key] || []).push(hit.value);
     };
     TABS[tab].keys.forEach(k => params.getAll(k).forEach(v => want(k, v)));
@@ -1637,7 +1640,7 @@
     const PH = D.phrases;
     const CA = Object.keys(PH.region).filter(r => r !== 'outside');
     const KIND_OF = {};
-    eoWrap.querySelectorAll('[data-facet="type"] label[data-kind] input').forEach(i => { KIND_OF[i.value] = i.closest('label').dataset.kind; });
+    eoWrap.querySelectorAll('[data-facet="type"] label[data-kind] input').forEach(i => { KIND_OF[i.value] = optOf(i).dataset.kind; });
     const region = r => { const [plain, hl] = (PH.region[r] || '|' + r).split('|'); return esc(plain) + chip(hl, 'region'); };
     const sentence = () => {
       if (!ui.count() && !f.q) return 'Events and open calls.';
@@ -1835,7 +1838,7 @@
     const wanted = {};
     const want = (key, raw) => {
       const v = String(raw).trim().toLowerCase();
-      const hit = [...eoWrap.querySelectorAll(`[data-facet="${key}"] [data-facet-input]`)].find(i => i.value && (i.value.toLowerCase() === v || i.closest('label').textContent.trim().toLowerCase() === v));
+      const hit = [...eoWrap.querySelectorAll(`[data-facet="${key}"] [data-facet-input]`)].find(i => i.value && (i.value.toLowerCase() === v || optOf(i).textContent.trim().toLowerCase() === v));
       if (hit) (wanted[key] = wanted[key] || []).push(hit.value);
     };
     KEYS.forEach(k => params.getAll(k).forEach(v => want(k, v)));
