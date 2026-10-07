@@ -1,5 +1,5 @@
 {
-  "built_pages": 82,
+  "built_pages": 115,
   "pages": [
     {
       "url": "/",
@@ -7,189 +7,14 @@
       "section": "home"
     },
     {
-      "url": "/about/",
-      "title": "About",
-      "section": "about"
-    },
-    {
-      "url": "/workforce/",
-      "title": "Workforce Development",
-      "section": "work"
-    },
-    {
-      "url": "/entrepreneurship/",
-      "title": "Entrepreneurship, Commercialization & Adoption",
-      "section": "work"
-    },
-    {
-      "url": "/network/",
-      "title": "Statewide Network & Collaboration",
-      "section": "work"
-    },
-    {
-      "url": "/workforce/partner-programs/",
-      "title": "Partner & Regional Programs | Workforce Development",
-      "section": "work"
-    },
-    {
-      "url": "/entrepreneurship/partner-programs/",
-      "title": "Partner & Regional Programs | Entrepreneurship, Commercialization & Adoption",
-      "section": "work"
-    },
-    {
-      "url": "/regions/bay-area/",
-      "title": "Bay Area",
-      "section": "regions"
-    },
-    {
-      "url": "/regions/capital/",
-      "title": "Capital",
-      "section": "regions"
-    },
-    {
-      "url": "/regions/central-coast/",
-      "title": "Central Coast",
-      "section": "regions"
-    },
-    {
-      "url": "/regions/central-san-joaquin/",
-      "title": "Central San Joaquin",
-      "section": "regions"
-    },
-    {
-      "url": "/regions/kern-county/",
-      "title": "Kern County",
-      "section": "regions"
-    },
-    {
-      "url": "/regions/northern-san-joaquin/",
-      "title": "Northern San Joaquin",
-      "section": "regions"
-    },
-    {
-      "url": "/regions/north-state/",
-      "title": "North State",
-      "section": "regions"
-    },
-    {
-      "url": "/regions/redwood/",
-      "title": "Redwood",
-      "section": "regions"
-    },
-    {
-      "url": "/regions/southern-border/",
-      "title": "Southern Border",
-      "section": "regions"
-    },
-    {
-      "url": "/workforce/agricultural-workforce-development/",
-      "title": "California Agricultural Workforce Development Program",
-      "section": "work"
-    },
-    {
-      "url": "/workforce/farm-robotics-challenge/",
-      "title": "Farm Robotics Challenge",
-      "section": "work"
-    },
-    {
-      "url": "/workforce/farm-robotics-academy/",
-      "title": "Farm Robotics Academy",
-      "section": "work"
-    },
-    {
-      "url": "/workforce/drones-uplifting-california-communities/",
-      "title": "Drones Uplifting California Communities",
-      "section": "work"
-    },
-    {
-      "url": "/workforce/farms-field-days/",
-      "title": "FARMS Program & Field Days",
-      "section": "work"
-    },
-    {
-      "url": "/entrepreneurship/build/",
-      "title": "UC ANR Build",
-      "section": "work"
-    },
-    {
-      "url": "/entrepreneurship/connect/",
-      "title": "UC ANR Connect",
-      "section": "work"
-    },
-    {
-      "url": "/entrepreneurship/innovation-grants/",
-      "title": "Innovation Grants",
-      "section": "work"
-    },
-    {
-      "url": "/audiences/entrepreneurs-startups/",
-      "title": "Entrepreneurs & Startups",
-      "section": "audiences"
-    },
-    {
-      "url": "/audiences/farmers-agricultural-operations/",
-      "title": "Farmers & Agricultural Operations",
-      "section": "audiences"
-    },
-    {
-      "url": "/audiences/farmworkers-adult-learners-career-changers/",
-      "title": "Farmworkers, Adult Learners & Career Changers",
-      "section": "audiences"
-    },
-    {
-      "url": "/audiences/students-educators-workforce-partners/",
-      "title": "Students, Educators & Workforce Partners",
-      "section": "audiences"
-    },
-    {
-      "url": "/audiences/regional-community-economic-development-partners/",
-      "title": "Regional, Community & Economic Development Partners",
-      "section": "audiences"
-    },
-    {
-      "url": "/audiences/entrepreneur-support-organizations/",
-      "title": "Entrepreneur Support Organizations",
-      "section": "audiences"
-    },
-    {
-      "url": "/audiences/investors-funders/",
-      "title": "Investors & Funders",
-      "section": "audiences"
-    },
-    {
-      "url": "/audiences/industry-policy-leaders/",
-      "title": "Industry & Policy Leaders",
-      "section": "audiences"
-    },
-    {
-      "url": "/about/governance/",
-      "title": "Governance",
-      "section": "about"
-    },
-    {
-      "url": "/network/connections-referrals/",
-      "title": "Connections & Referrals",
-      "section": "work"
-    },
-    {
-      "url": "/network/investor-network/",
-      "title": "Investor Network",
-      "section": "work"
-    },
-    {
-      "url": "/network/working-groups-meetings/",
-      "title": "Working Groups & Partner Meetings",
-      "section": "work"
-    },
-    {
       "url": "/events-opportunities/",
-      "title": "Events & Opportunities",
+      "title": "Events & Open Calls",
       "section": "events"
     },
     {
-      "url": "/resources/",
-      "title": "Resource Library",
-      "section": "resources"
+      "url": "/events-opportunities/share/",
+      "title": "Share an event or open call",
+      "section": "events"
     },
     {
       "url": "/stories/",
@@ -197,39 +22,29 @@
       "section": "stories"
     },
     {
-      "url": "/newsroom/",
-      "title": "Newsroom",
-      "section": "newsroom"
-    },
-    {
-      "url": "/directory/",
-      "title": "Network Directory / Map",
-      "section": "resources"
-    },
-    {
-      "url": "/testbeds/",
-      "title": "Testbed Map",
-      "section": "resources"
-    },
-    {
-      "url": "/startups/",
-      "title": "Startup & Alumni Directory",
-      "section": "resources"
-    },
-    {
-      "url": "/about/team/",
-      "title": "Team",
-      "section": "about"
-    },
-    {
-      "url": "/storytelling-toolkit/",
-      "title": "Storytelling Toolkit",
-      "section": "resources"
-    },
-    {
       "url": "/contact/",
       "title": "Contact",
       "section": "contact"
+    },
+    {
+      "url": "/join/",
+      "title": "Join the Network",
+      "section": "contact"
+    },
+    {
+      "url": "/referral/",
+      "title": "Request a Referral",
+      "section": "contact"
+    },
+    {
+      "url": "/stories/share/",
+      "title": "Share Your Story",
+      "section": "stories"
+    },
+    {
+      "url": "/programs/submit/",
+      "title": "Submit a Program",
+      "section": "resources"
     },
     {
       "url": "/accessibility/",
@@ -252,164 +67,514 @@
       "section": "events"
     },
     {
-      "url": "/stories/drone-field-day/",
-      "title": "What growers learned at a drone field day.",
+      "url": "/directory/",
+      "title": "Partner Directory",
+      "section": "resources"
+    },
+    {
+      "url": "/programs/",
+      "title": "Program Directory",
+      "section": "resources"
+    },
+    {
+      "url": "/stories/what-we-learned-from-australia/",
+      "title": "What We Learned from Australia",
       "section": "stories"
     },
     {
-      "url": "/stories/hartnell-cohort/",
-      "title": "A Hartnell cohort finishes its first season.",
+      "url": "/stories/building-californias-statewide-front-door-for-agricultural-innovation/",
+      "title": "Building California’s Statewide Front Door for Agricultural Innovation",
       "section": "stories"
     },
     {
-      "url": "/stories/soil-sensors/",
-      "title": "Testing soil sensors on a Central Coast ranch.",
-      "section": "stories"
-    },
-    {
-      "url": "/stories/three-startups/",
-      "title": "Three startups, one strawberry field.",
-      "section": "stories"
-    },
-    {
-      "url": "/stories/job-board/",
-      "title": "How a region built its first AgTech job board.",
-      "section": "stories"
-    },
-    {
-      "url": "/stories/robotics/",
-      "title": "Notes from the Farm Robotics Challenge.",
-      "section": "stories"
-    },
-    {
-      "url": "/stories/irrigation-data/",
-      "title": "Sharing irrigation data across a watershed.",
-      "section": "stories"
-    },
-    {
-      "url": "/stories/customer-discovery/",
-      "title": "Turning a farm problem into a business question.",
-      "section": "stories"
-    },
-    {
-      "url": "/stories/educators/",
-      "title": "Connecting educators with agricultural employers.",
-      "section": "stories"
-    },
-    {
-      "url": "/stories/investor-connections/",
-      "title": "Building relationships between founders and investors.",
-      "section": "stories"
-    },
-    {
-      "url": "/stories/field-days/",
-      "title": "Learning in the field, together.",
-      "section": "stories"
-    },
-    {
-      "url": "/stories/innovation-grants/",
-      "title": "Supporting the next step in agricultural innovation.",
-      "section": "stories"
-    },
-    {
-      "url": "/stories/quarterly-meetings/",
-      "title": "What partners bring to a statewide conversation.",
-      "section": "stories"
-    },
-    {
-      "url": "/newsroom/grants/",
-      "title": "Alliance announces Innovation Grant recipients.",
-      "section": "newsroom"
-    },
-    {
-      "url": "/newsroom/robotics/",
-      "title": "UC ANR and regional partners launch Farm Robotics Challenge.",
-      "section": "newsroom"
-    },
-    {
-      "url": "/newsroom/convening/",
-      "title": "Annual Convening 2027 dates and location announced.",
-      "section": "newsroom"
-    },
-    {
-      "url": "/newsroom/hartnell/",
-      "title": "Hartnell College joins the Alliance workforce network.",
-      "section": "newsroom"
-    },
-    {
-      "url": "/newsroom/build/",
-      "title": "UC ANR Build opens applications for its next cohort.",
-      "section": "newsroom"
-    },
-    {
-      "url": "/newsroom/roadmap/",
-      "title": "Alliance publishes its Innovation Roadmap.",
-      "section": "newsroom"
-    },
-    {
-      "url": "/newsroom/field-days/",
-      "title": "Partners announce a new season of agricultural field days.",
-      "section": "newsroom"
-    },
-    {
-      "url": "/newsroom/directory/",
-      "title": "Alliance introduces its statewide Network Directory.",
-      "section": "newsroom"
-    },
-    {
-      "url": "/events/agricultural-technology-validation-workshop/",
-      "title": "Agricultural technology validation workshop",
-      "section": "events"
-    },
-    {
-      "url": "/events/bringing-agricultural-technology-into-the-classroom/",
-      "title": "Bringing agricultural technology into the classroom",
-      "section": "events"
-    },
-    {
-      "url": "/events/agricultural-technology-field-day/",
-      "title": "Agricultural technology field day",
-      "section": "events"
-    },
-    {
-      "url": "/events/precision-irrigation-webinar/",
-      "title": "Precision irrigation webinar",
-      "section": "events"
-    },
-    {
-      "url": "/directory/coastal/",
-      "title": "Coastal AgTech Studio",
+      "url": "/directory/action-council-and-mujeres-en-accion/",
+      "title": "Action Council and Mujeres en Acción",
       "section": "directory"
     },
     {
-      "url": "/directory/research/",
-      "title": "Field Research Collaborative",
+      "url": "/directory/agfunder/",
+      "title": "AgFunder",
       "section": "directory"
     },
     {
-      "url": "/directory/harvest/",
-      "title": "Harvest Investment Network",
+      "url": "/directory/aggie-square/",
+      "title": "Aggie Square",
       "section": "directory"
     },
     {
-      "url": "/directory/community/",
-      "title": "North State Learning Partnership",
+      "url": "/directory/agricultural-council-of-california/",
+      "title": "Agricultural Council of California",
       "section": "directory"
     },
     {
-      "url": "/directory/growers/",
-      "title": "Valley Growers Council",
+      "url": "/directory/agstep/",
+      "title": "AgSTEP",
       "section": "directory"
     },
     {
-      "url": "/directory/valley/",
-      "title": "Valley Skills Center",
+      "url": "/directory/agtech-innovation-alliance/",
+      "title": "AgTech Innovation Alliance",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/ai-institute-next-generation-food-systems/",
+      "title": "AI Institute for Next Generation Food Systems (AIFS)",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/bay-area-council/",
+      "title": "Bay Area Council",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/blue-rise-ventures/",
+      "title": "Blue Rise Ventures",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/building-healthy-communities-kern/",
+      "title": "Building Healthy Communities Kern",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/california-association-of-winegrape-growers/",
+      "title": "California Association of Winegrape Growers",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/california-cotton-ginners-and-growers-association/",
+      "title": "California Cotton Ginners and Growers Association",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/california-department-of-food-and-agriculture-cdfa/",
+      "title": "California Department of Food and Agriculture (CDFA)",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/california-farmworker-foundation/",
+      "title": "California Farmworker Foundation",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/california-governors-office-of-business-and-economic-development-go-biz/",
+      "title": "California Governor’s Office of Business and Economic Development (GO-Biz)",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/california-grown-ca-grown/",
+      "title": "California Grown (CA GROWN)",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/california-state-university-chico-chico-state/",
+      "title": "California State University, Chico (Chico State)",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/center-for-land-based-learning/",
+      "title": "Center for Land-Based Learning",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/chicostart/",
+      "title": "ChicoSTART",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/city-of-davis/",
+      "title": "City of Davis",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/city-of-napa/",
+      "title": "City of Napa",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/city-of-woodland/",
+      "title": "City of Woodland",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/community-alliance-with-family-farmers/",
+      "title": "Community Alliance with Family Farmers",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/community-foundation-of-merced-county/",
+      "title": "Community Foundation of Merced County",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/csu-bakersfield/",
+      "title": "CSU Bakersfield",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/csu-san-marcos/",
+      "title": "CSU San Marcos",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/digital-nest/",
+      "title": "Digital NEST",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/economic-development-collaborative/",
+      "title": "Economic Development Collaborative",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/epix-studios/",
+      "title": "Epix Studios",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/escondido-agx/",
+      "title": "Escondido AgX",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/f3-activated-alliance/",
+      "title": "F3 Activated Alliance",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/f3-innovate/",
+      "title": "F3 Innovate",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/f3-local/",
+      "title": "F3 Local",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/farmhand-ventures/",
+      "title": "Farmhand Ventures",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/fleishmanhillard/",
+      "title": "FleishmanHillard",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/foundation-for-california-community-colleges/",
+      "title": "Foundation for California Community Colleges",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/fresno-county-economic-development-corporation/",
+      "title": "Fresno County Economic Development Corporation",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/fresno-state/",
+      "title": "Fresno State",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/fulcrum-property/",
+      "title": "Fulcrum Property",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/greater-sacramento-economic-council/",
+      "title": "Greater Sacramento Economic Council",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/hartnell-college/",
+      "title": "Hartnell College",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/honey/",
+      "title": "Honey",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/imperial-valley-college/",
+      "title": "Imperial Valley College",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/imperial-valley-economic-development-corporation/",
+      "title": "Imperial Valley Economic Development Corporation",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/kern-county/",
+      "title": "Kern County",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/limagrain/",
+      "title": "Limagrain",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/merced-agtech-alliance/",
+      "title": "Merced AgTech Alliance",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/merced-college/",
+      "title": "Merced College",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/monterey-bay-economic-partnership/",
+      "title": "Monterey Bay Economic Partnership",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/monterey-bay-tech-hub/",
+      "title": "Monterey Bay Tech Hub",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/napa-chamber-of-commerce/",
+      "title": "Napa Chamber of Commerce",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/napa-county-farm-bureau/",
+      "title": "Napa County Farm Bureau",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/napa-county-hispanic-chamber-of-commerce/",
+      "title": "Napa County Hispanic Chamber of Commerce",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/napa-green/",
+      "title": "Napa Green",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/napa-next/",
+      "title": "Napa Next",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/napa-valley-college-viticulture-and-winery-technology/",
+      "title": "Napa Valley College",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/napa-valley-farmworker-foundation/",
+      "title": "Napa Valley Farmworker Foundation",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/napa-valley-grapegrowers/",
+      "title": "Napa Valley Grapegrowers",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/napa-valley-vintners/",
+      "title": "Napa Valley Vintners",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/napa-vc/",
+      "title": "Napa VC",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/north-stateredwood-coast-ag-tech-alliance/",
+      "title": "North State–Redwood Coast Ag-Tech Alliance",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/orange-coast-college-occ/",
+      "title": "Orange Coast College (OCC)",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/plug-and-play/",
+      "title": "Plug and Play",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/rancho-cielo-agtech-pathways/",
+      "title": "Rancho Cielo",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/reach/",
+      "title": "REACH",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/reap-climate-center/",
+      "title": "REAP Climate Center",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/reedley-college/",
+      "title": "Reedley College",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/reservoir-farms/",
+      "title": "Reservoir",
       "section": "directory"
     },
     {
       "url": "/directory/riot-labs/",
       "title": "RIoT Labs",
       "section": "directory"
+    },
+    {
+      "url": "/directory/salinas-valley-agtech-alliance/",
+      "title": "Salinas Valley AgTech Alliance",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/sf-adapt/",
+      "title": "SF-ADAPT",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/shasta-valley-resource-conservation-district/",
+      "title": "Shasta Valley Resource Conservation District",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/siskiyou-economic-development-council/",
+      "title": "Siskiyou Economic Development Council",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/sonoma-county/",
+      "title": "Sonoma County",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/sutter-county/",
+      "title": "Sutter County",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/svg-ventures-thrive/",
+      "title": "SVG Ventures | THRIVE",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/uc-agriculture-and-natural-resources-uc-anr/",
+      "title": "UC Agriculture and Natural Resources (UC ANR)",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/uc-anr-hopland-research-and-extension-center/",
+      "title": "UC ANR Hopland Research and Extension Center",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/uc-anr-informatics-and-gis/",
+      "title": "UC ANR Informatics and GIS (IGIS)",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/uc-anr-innovate/",
+      "title": "UC ANR Innovate",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/uc-davis/",
+      "title": "UC Davis",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/uc-davis-venture-catalyst/",
+      "title": "UC Davis Venture Catalyst",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/uc-merced-citris/",
+      "title": "UC Merced — CITRIS",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/uc-riverside/",
+      "title": "UC Riverside",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/uc-santa-cruz-citris-cider/",
+      "title": "UC Santa Cruz — CITRIS / CIDER",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/university-of-california-merced/",
+      "title": "University of California, Merced",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/uplift-central-coast/",
+      "title": "Uplift Central Coast",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/ventura-county-farm-to-school/",
+      "title": "Ventura County Farm to School",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/western-growers/",
+      "title": "Western Growers",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/wet-center/",
+      "title": "WET Center",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/workforce-alliance-of-the-north-bay/",
+      "title": "Workforce Alliance of the North Bay",
+      "section": "directory"
+    },
+    {
+      "url": "/directory/yield-lab-institute/",
+      "title": "Yield Lab Institute",
+      "section": "directory"
+    },
+    {
+      "url": "/newsroom/",
+      "title": "Newsroom",
+      "section": "newsroom"
+    },
+    {
+      "url": "/newsroom/crop-robotics-landscape-2026/",
+      "title": "2026 Crop Robotics Landscape maps more than 400 companies worldwide",
+      "section": "newsroom"
+    },
+    {
+      "url": "/newsroom/crop-robotics-landscape-2026-advisory/",
+      "title": "Media Invited to 2026 Crop Robotics Landscape Launch",
+      "section": "newsroom"
+    },
+    {
+      "url": "/newsroom/innovation-roadmap/",
+      "title": "CDFA, UC ANR and partners introduce California Agricultural Research and Innovation Roadmap",
+      "section": "newsroom"
+    },
+    {
+      "url": "/newsroom/alliance-launches/",
+      "title": "California AgTech Alliance launches to help farmers stay competitive",
+      "section": "newsroom"
+    },
+    {
+      "url": "/newsroom/fira-usa-launch-advisory/",
+      "title": "California AgTech Alliance to Launch at FIRA USA Oct. 22",
+      "section": "newsroom"
     }
   ]
 }
