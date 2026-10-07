@@ -781,11 +781,9 @@ a.lead-partner:hover span{text-decoration:underline;text-decoration-color:var(--
   .mast.mast--stack{padding:var(--s-7) 0 0}  /* the photo runs to the hero's edge (the ≤640 .mast padding left a navy strip) */
 }
 
-/* The design's header (user, 2026-10-07 "keep my design"): the nav tightens below 1100px as in the Oct 6 design file, and the
-   Menu :is(button,[role=button])'s drawer takes over below 1060px, where the one-line header stops fitting (measured 1044px with the design's labels
-   "Partners" and "Events & Open Calls"; it was 1200px with "Partnership Opportunities", user, 2026-10-06). */
-@media(max-width:1100px){.mnav-list{gap:0 18px}.mnav-link,.mnav-trigger{font-size:13.5px}.global-header__inner{gap:var(--s-4)}}
-@media(max-width:1060px){
+/* To 1200px (raised from the brand's 1100px when the menu became "Partnership Opportunities", user, 2026-10-06, reaffirmed
+   2026-10-07: the one-line header needs about 1180px): the Menu :is(button,[role=button]) opens a drawer of the section menus, each opening in place. */
+@media(max-width:1200px){
   :root{--header-h:76px;--brand-h:76px}
   .js .nav-toggle{display:inline-flex;margin-left:auto}.global-header__inner{min-height:76px;gap:0 var(--s-4);flex-wrap:wrap}
   html:not(.js) .global-header{position:static}  /* without the script the menu is a plain list of links, so the header doesn't stick */

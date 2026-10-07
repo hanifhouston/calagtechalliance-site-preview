@@ -5,12 +5,12 @@
   const optOf = i => i.closest('.facet__opt') || i.closest('[data-kind]') || i.closest('label');  // the option row (Webflow nests its own label inside)
   // Site navigation (site_builder/navigation.py; the user's design of 2026-10-05). Each section's name becomes a button that
   // opens its panel (without the script it's a link to the section's overview page). One panel at a time; Escape, a click
-  // outside or on the scrim, or focus leaving the panel closes it. Under 1060px the Menu button opens the drawer, where the
+  // outside or on the scrim, or focus leaving the panel closes it. Under 1200px the Menu button opens the drawer, where the
   // panels open in place.
   const nav = document.querySelector('[data-mnav]');
   const menu = document.querySelector('#primary-menu');
   const toggle = document.querySelector('[data-menu-toggle]');
-  const narrow = window.matchMedia('(max-width: 1060px)');  // the drawer (site.css; 1060px since 2026-10-07, 1200px before)
+  const narrow = window.matchMedia('(max-width: 1200px)');  // the drawer (site.css; 1200px since 2026-10-06)
   const lis = nav ? [...nav.querySelectorAll('.mnav-li')] : [];
   const scrim = nav && nav.querySelector('[data-mnav-scrim]');
   let openLi = null;
