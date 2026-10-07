@@ -85,7 +85,7 @@ details.acc[open] .acc__icon{transform:rotate(45deg)}
 .s-navy{background:var(--cata-navy);color:var(--cata-cream)}
 .s-navy h2,.s-navy h3,.s-navy h4{color:var(--cata-mint)}
 .s-navy .eyebrow{color:var(--cata-mint)}
-.s-navy a:where(:not(.btn)){color:var(--cata-lime)}.s-navy a:where(:not(.btn)):hover{color:var(--cata-lime-soft)}
+.s-navy a:where(:not(.btn,[role=:is(button,[role=button])],[role=tab])){color:var(--cata-lime)}.s-navy a:where(:not(.btn,[role=:is(button,[role=button])],[role=tab])):hover{color:var(--cata-lime-soft)}  /* not the Webflow copy's converted :is(button,[role=button])s (Coming up tabs read cream, lime on hover; 2026-10-07) */
 .s-navy .lede,.s-navy .small,.s-navy .prose{color:var(--cata-cream)}
 .s-navy .mono{color:var(--cata-mint)}
 .s-navy .logo .mono{color:var(--cata-ink-3)}
