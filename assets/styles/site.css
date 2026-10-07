@@ -782,7 +782,7 @@ a.lead-partner:hover span{text-decoration:underline;text-decoration-color:var(--
 
 /* The design's header (user, 2026-10-07 "keep my design"): the nav tightens below 1100px as in the Oct 6 design file, and the
    Menu button's drawer takes over below 1060px, where the one-line header stops fitting (measured 1044px with the design's labels
-   "Partners" and "Events & Opportunities"; it was 1200px with "Partnership Opportunities", user, 2026-10-06). */
+   "Partners" and "Events & Open Calls"; it was 1200px with "Partnership Opportunities", user, 2026-10-06). */
 @media(max-width:1100px){.mnav-list{gap:0 18px}.mnav-link,.mnav-trigger{font-size:13.5px}.global-header__inner{gap:var(--s-4)}}
 @media(max-width:1060px){
   :root{--header-h:76px;--brand-h:76px}
