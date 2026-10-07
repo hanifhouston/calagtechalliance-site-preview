@@ -2039,7 +2039,9 @@
   fit();
   window.addEventListener('resize', fit);
   if ('ResizeObserver' in window) new ResizeObserver(fit).observe(side);  // logos and fonts change its height as they load
+})();
 
+(() => {
   // Partner profile on Webflow (the Partners collection's template page, built by export_webflow.py's recipe): the CMS binds
   // the name, logo, overview, what they do, addresses and contacts; this fills the rest from the directory data the page
   // loads (#directory-data, #pp-programs-data): the Alliance badge, the website label, the referral link, the sidebar's
@@ -2084,6 +2086,62 @@
       }
     }
   })();
+})();
+
+(() => {
+  // Newsroom item on Webflow (the Newsroom collection's template page): the CMS binds the type, title, subhead, date,
+  // text and the original release's link; this fills the rest from data/newsroom-index.json: the date's wording, the
+  // other-language links, Related (the release/advisory pair and the item's links) and More from the Newsroom. Inert
+  // on the local build.
+  const root = document.querySelector('[data-nr-slug]');
+  if (!root) return;
+  const slug = root.getAttribute('data-nr-slug');
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const NE = '<svg class="icon icon-arrow-ne" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3.5 10.5 L 10.5 3.5"/><path d="M5 3.5 L 10.5 3.5 L 10.5 9"/></svg>';
+  const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const long = iso => { const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso || ''); return m ? MONTHS[+m[2] - 1] + ' ' + (+m[3]) + ', ' + m[1] : (iso || ''); };
+  const short = iso => { const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso || ''); return m ? MONTHS[+m[2] - 1].slice(0, 3).toUpperCase() + ' ' + m[3] + '<br>' + m[1] : ''; };
+  const TYPE = { 'press-release': 'Press release', 'media-advisory': 'Media advisory' };
+  const date = root.querySelector('[data-nr-date]');
+  if (date && /^\d{4}-\d{2}-\d{2}/.test(date.textContent.trim())) date.textContent = long(date.textContent.trim());
+  const sub = root.querySelector('[data-nr-subhead]');
+  if (sub && !sub.textContent.trim()) sub.hidden = true;
+  const orig = root.querySelector('[data-nr-original]'), origLink = root.querySelector('[data-nr-original-link]');
+  const el = document.getElementById('newsroom-index');
+  let items = []; try { items = el ? JSON.parse(el.textContent) : []; } catch (e) { items = []; }
+  const me = items.find(i => i.slug === slug);
+  if (orig) {
+    if (me && me.original && me.original.url) {
+      origLink.setAttribute('href', me.original.url); origLink.textContent = me.original.publisher || 'the issuing organization';
+      orig.append(' on ' + long(me.original.date || me.date) + '.'); orig.lastChild.previousSibling && (orig.lastChild.previousSibling.textContent = '');
+      orig.hidden = false;
+    } else orig.hidden = true;
+  }
+  if (!me) return;
+  const langs = root.querySelector('[data-nr-langs]');
+  if (langs && me.languages && me.languages.length) {
+    langs.innerHTML = me.languages.map(l => '<li><a class="text-link"' + (l.lang ? ' lang="' + esc(l.lang) + '"' : '') + ' href="' + esc(l.url) + '" rel="noopener">' + esc(l.label) + ' ' + NE + '</a></li>').join('');
+    root.querySelector('[data-nr-langs-wrap]').hidden = false;
+  }
+  const rel = root.querySelector('[data-nr-related]');
+  if (rel) {
+    const links = [];
+    (me.related || []).forEach(r => { if (r && r.url) links.push({ label: r.label || r.url, url: r.url }); });
+    if (me.follows) { const f = items.find(i => i.slug === me.follows); if (f) links.push({ label: f.type === 'media-advisory' ? 'Media advisory for this release' : 'Press release for this advisory', url: '/newsroom' + f.slug }); }
+    items.forEach(i => { if (i.follows === slug) links.push({ label: i.type === 'media-advisory' ? 'Media advisory for this release' : 'Press release for this advisory', url: '/newsroom' + i.slug }); });
+    if (links.length) {
+      rel.innerHTML = links.map(l => '<li><a class="text-link" href="' + esc(l.url) + '"' + (/^https?:/.test(l.url) ? ' rel="noopener"' : '') + '>' + esc(l.label) + (/^https?:/.test(l.url) ? ' ' + NE : '') + '</a></li>').join('');
+      root.querySelector('[data-nr-related-wrap]').hidden = false;
+    }
+  }
+  const more = root.querySelector('[data-nr-more]');
+  if (more) {
+    const others = items.filter(i => i.slug !== slug && i.status === 'published').sort((a, b) => (b.date || '').localeCompare(a.date || '')).slice(0, 3);
+    if (others.length) {
+      more.innerHTML = others.map(i => '<div class="row"><div class="row__date"><time datetime="' + esc(i.date) + '">' + short(i.date) + '</time></div><div><h3><a href="/newsroom' + esc(i.slug) + '">' + esc(i.title) + '</a></h3><div class="row__meta">' + esc(TYPE[i.type] || i.type) + (i.issued_with ? ' · With ' + esc(i.issued_with) : '') + '</div>' + (i.summary ? '<p>' + esc(i.summary) + '</p>' : '') + '</div></div>').join('');
+      root.querySelector('[data-nr-more-wrap]').hidden = false;
+    }
+  }
 })();
 
 // Webflow copy: the builder turns <button> into links with role=button; Enter and Space activate them like buttons.
