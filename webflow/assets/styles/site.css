@@ -1390,7 +1390,7 @@ a.res__row:hover{transform:translateY(-2px);border-color:var(--cata-navy)}
 .mast--listing{padding:var(--s-7) 0 56px}
 .mast--listing .mast__crumbs{margin-bottom:20px}
 .mast--listing .mast__crumbs>span{color:var(--cata-cream)}
-.mast--listing h1{max-width:24ch;min-height:2.28em;margin:0;font-size:clamp(36px,4.4vw,56px);line-height:1.14;letter-spacing:-.02em;text-wrap:balance}
+.mast--listing h1{max-width:24ch;min-height:2.6em;margin:0;font-size:clamp(36px,4.4vw,56px);line-height:1.3;letter-spacing:-.02em;text-wrap:balance}  /* 1.3 (was 1.14): Atyp's content box is ~1.16em, so the highlight blocks on neighbouring lines touched; the Oct 4 design shows ~7px of air between them (user, 2026-10-07) */
 .eo.section{padding:48px 0 64px}
 .eo-bar{margin-bottom:0;padding-bottom:20px;border-bottom:1px solid var(--cata-rule)}
 .eo-bar .dir-count{font-size:13px}
