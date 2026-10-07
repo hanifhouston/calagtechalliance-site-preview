@@ -2039,4 +2039,49 @@
   fit();
   window.addEventListener('resize', fit);
   if ('ResizeObserver' in window) new ResizeObserver(fit).observe(side);  // logos and fonts change its height as they load
+
+  // Partner profile on Webflow (the Partners collection's template page, built by export_webflow.py's recipe): the CMS binds
+  // the name, logo, overview, what they do, addresses and contacts; this fills the rest from the directory data the page
+  // loads (#directory-data, #pp-programs-data): the Alliance badge, the website label, the referral link, the sidebar's
+  // type and tags, and the programs list. Sections whose rich text came back empty are hidden. Inert on the local build.
+  const ppRoot = document.querySelector('[data-pp-slug]');
+  if (ppRoot) (() => {
+    const slug = ppRoot.getAttribute('data-pp-slug');
+    const dirEl = document.getElementById('directory-data');
+    const progEl = document.getElementById('pp-programs-data');
+    const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const NE = '<svg class="icon icon-arrow-ne" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3.5 10.5 L 10.5 3.5"/><path d="M5 3.5 L 10.5 3.5 L 10.5 9"/></svg>';
+    ppRoot.querySelectorAll('[data-pp-rt]').forEach(rt => {
+      if (rt.textContent.trim() || rt.querySelector('img')) return;
+      const sec = rt.closest('[data-pp-sec]'); if (sec) sec.hidden = true;
+    });
+    const ref = ppRoot.querySelector('[data-pp-referral]');
+    if (ref) ref.setAttribute('href', '/referral?partner=' + encodeURIComponent(slug));
+    if (!dirEl) return;
+    let dir; try { dir = JSON.parse(dirEl.textContent); } catch (e) { return; }
+    const org = (dir.orgs || []).find(o => o.id === slug);
+    if (!org) return;
+    let progs = []; try { progs = progEl ? JSON.parse(progEl.textContent).programs || [] : []; } catch (e) { progs = []; }
+    const site = ppRoot.querySelector('[data-pp-site]');
+    if (site) { if (org.website) { site.setAttribute('href', org.website); site.innerHTML = esc(org.domain || org.website) + NE; } else site.hidden = true; }
+    const badges = ppRoot.querySelector('[data-pp-badges]');
+    if (badges && org.alliance) { badges.innerHTML = '<span class="badges"><span class="badge">Alliance partner</span></span>'; badges.hidden = false; }
+    const facts = ppRoot.querySelector('[data-pp-facts]');
+    if (facts) {
+      const type = facts.querySelector('[data-pp-type]');
+      if (type) type.textContent = org.type || '';
+      const group = (label, items) => items && items.length ? '<div><dt>' + esc(label) + '</dt><dd class="pc-tags">' + items.map(t => '<span class="pc-tag">' + esc(t) + '</span>').join('') + '</dd></div>' : '';
+      facts.insertAdjacentHTML('beforeend', group('Who they serve', org.audiences) + group('Support offered', org.support) + group('Topics', org.topics));
+    }
+    const list = ppRoot.querySelector('[data-pp-programs]');
+    if (list) {
+      const mine = (org.programs || []).map(id => progs.find(p => p.id === id)).filter(Boolean);
+      if (mine.length) {
+        list.innerHTML = mine.map(p => '<li><a class="pp-prog" href="' + esc(p.url || p.website || '/programs') + '"><span class="pp-prog__text"><span class="pp-prog__name">' + esc(p.name) + '</span>' +
+          (p.alliance ? '<span class="badges"><span class="badge">Alliance program</span></span>' : '') + (p.short ? '<span class="pp-prog__desc">' + esc(p.short) + '</span>' : '') +
+          '</span><span class="pp-prog__go">Program website' + NE + '</span></a></li>').join('');
+        const sec = ppRoot.querySelector('[data-pp-sec="programs"]'); if (sec) sec.hidden = false;
+      }
+    }
+  })();
 })();
