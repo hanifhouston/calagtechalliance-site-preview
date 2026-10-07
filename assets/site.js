@@ -2176,3 +2176,40 @@
     location.href = f.getAttribute('data-cata-get') + (q.toString() ? '?' + q : '');
   }, true));
 })();
+
+(() => {
+  // Story on Webflow (the Stories collection's template page): the CMS binds the type, title, summary, lead image and
+  // caption, date, pillar, region and body; this fills the date's wording, the closing line, the title, and More stories
+  // from data/stories-index.json. Inert on the local build.
+  const root = document.querySelector('[data-st-slug]');
+  if (!root) return;
+  const slug = root.getAttribute('data-st-slug');
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const long = iso => { const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso || ''); return m ? MONTHS[+m[2] - 1] + ' ' + (+m[3]) + ', ' + m[1] : (iso || ''); };
+  const title = (root.querySelector('h1') || {}).textContent;
+  if (title && title.trim()) document.title = title.trim() + ' \u2014 Stories \u2014 California AgTech Alliance';
+  const date = root.querySelector('[data-st-date]');
+  const when = date ? long(date.textContent.trim()) : '';
+  if (date) date.textContent = when;
+  const region = root.querySelector('[data-st-region]'), pillar = root.querySelector('[data-st-pillar]');
+  if (region && !region.textContent.trim()) region.hidden = true;
+  if (pillar && !pillar.textContent.trim()) pillar.hidden = true;
+  const end = root.querySelector('[data-st-end]');
+  if (end) end.textContent = [when, region && !region.hidden ? region.textContent.trim() : ''].filter(Boolean).join(' \u00b7 ');
+  const cap = root.querySelector('[data-st-caption]');
+  if (cap && !cap.textContent.trim()) cap.hidden = true;
+  const fig = root.querySelector('[data-st-figure]');
+  if (fig && !fig.querySelector('img')) fig.hidden = true;
+  const sum = root.querySelector('[data-st-summary]');
+  if (sum && !sum.textContent.trim()) sum.hidden = true;
+  const el = document.getElementById('stories-index');
+  let items = []; try { items = el ? JSON.parse(el.textContent) : []; } catch (e) { items = []; }
+  const more = root.querySelector('[data-st-more]');
+  const others = items.filter(i => i.slug !== slug).sort((a, b) => (b.date || '').localeCompare(a.date || '')).slice(0, 3);
+  if (more && others.length) {
+    more.innerHTML = others.map(i => '<article class="card">' + (i.image ? '<img class="card__img" src="' + esc(i.image) + '" alt="' + esc(i.alt) + '" loading="lazy">' : '') +
+      '<div class="card__body"><p class="eyebrow">' + esc(i.category) + '</p><h3><a href="/calagtechalliance-site-preview/stories/' + esc(i.slug) + '">' + esc(i.title) + '</a></h3><p>' + esc(i.summary) + '</p><p class="mono">' + esc(long(i.date)) + (i.region ? ' \u00b7 ' + esc(i.region) : '') + '</p></div></article>').join('');
+    const wrap = root.querySelector('[data-st-more-wrap]'); if (wrap) wrap.hidden = false;
+  }
+})();
