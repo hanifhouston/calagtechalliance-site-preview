@@ -30,8 +30,8 @@ a:hover{color:var(--cata-teal-deep);text-decoration-thickness:2px}
 /* tokens.css draws the lime 2px ring at a 2px offset; the navy band fills the offset so the ring reads on light grounds. */
 :focus-visible{box-shadow:0 0 0 2px var(--cata-navy)}
 main:focus-visible{outline:0;box-shadow:none}
-button,input,select,textarea{font:inherit;color:inherit}
-button,summary{cursor:pointer}
+:is(button,[role=button]),input,select,textarea{font:inherit;color:inherit}
+:is(button,[role=button]),summary{cursor:pointer}
 h1,h2,h3,h4,p,ul,ol,dl,dd,figure{margin-top:0}
 p,ul,ol,dl{margin-bottom:var(--s-4)}
 p:last-child,ul:last-child,ol:last-child,dl:last-child{margin-bottom:0}
@@ -92,7 +92,7 @@ details.acc[open] .acc__icon{transform:rotate(45deg)}
 .s-teal .eyebrow{color:var(--cata-mint)}
 .s-teal a:where(:not(.btn)){color:var(--cata-lime)}.s-teal a:where(:not(.btn)):hover{color:var(--cata-mint)}
 
-/* ---------- buttons & links ---------- */
+/* ---------- :is(button,[role=button])s & links ---------- */
 /* Kit default: 14px, 12px 18px (≈41px). Kit large (.btn--lg): 15px, 14px 22px (≈46px) for masthead, panel and closing CTAs. */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 18px;border-radius:var(--radius-pill);border:1.5px solid var(--cata-lime);background:var(--cata-lime);color:var(--cata-navy);font-weight:600;font-size:var(--t-body-sm);line-height:1;text-decoration:none;white-space:nowrap;transition:transform var(--dur-fast) var(--ease-out),background-color var(--dur-base) var(--ease-out),border-color var(--dur-base) var(--ease-out),color var(--dur-base) var(--ease-out)}
 .btn:not(.is-pending):hover{background:var(--cata-lime-deep);border-color:var(--cata-lime-deep);color:var(--cata-navy);text-decoration:none}
@@ -267,12 +267,12 @@ details.acc[open] .acc__icon{transform:rotate(45deg)}
 .section .facet-bar>.container{max-width:none;padding-inline:var(--s-4)}
 /* Stories: the type bar under the masthead, one type at a time (2026-10-06; support_pages._story_type_bar, site.js) */
 .story-types__opts{display:flex;flex-wrap:wrap;gap:var(--s-2)}
-html:not(.js) .story-types__opts{display:none}  /* the buttons need site.js; html.js is set before the first paint, so no shift */
+html:not(.js) .story-types__opts{display:none}  /* the :is(button,[role=button])s need site.js; html.js is set before the first paint, so no shift */
 .story-type{min-height:40px;padding:0 var(--s-4);border:1px solid var(--cata-rule);border-radius:var(--radius-pill);background:#fff;color:var(--cata-navy);font:600 15px/1 var(--font-text);cursor:pointer;transition:border-color var(--dur-base) var(--ease-out),background-color var(--dur-base) var(--ease-out),color var(--dur-base) var(--ease-out)}
 .story-type:hover{border-color:var(--cata-navy)}
 .story-type[aria-pressed=true]{background:var(--cata-navy);border-color:var(--cata-navy);color:var(--cata-cream)}
 .tabs{display:inline-flex;gap:var(--s-1);background:var(--cata-navy);padding:4px;border-radius:var(--radius-pill)}
-.tabs a,.tabs button{padding:8px 18px;border-radius:var(--radius-pill);color:var(--cata-cream);text-decoration:none;font-size:14px;font-weight:500;border:0;background:transparent}
+.tabs a,.tabs :is(button,[role=button]){padding:8px 18px;border-radius:var(--radius-pill);color:var(--cata-cream);text-decoration:none;font-size:14px;font-weight:500;border:0;background:transparent}
 .tabs [aria-selected=true],.tabs [aria-pressed=true],.tabs .is-on{background:var(--cata-lime);color:var(--cata-navy);font-weight:700}
 
 /* ---------- layout patterns ---------- */
@@ -474,7 +474,7 @@ details.acc .acc__body{padding:0 0 var(--s-5)}.acc__body ul{margin:0}
 .gs-panel{position:relative;display:flex;flex-direction:column;gap:24px;padding:28px 28px 24px 36px;border-radius:var(--radius-3);background:var(--cata-paper);color:var(--cata-navy)}
 .gs-panel__top{display:flex;align-items:flex-start;gap:24px}
 .gs-sentence{flex:1;min-width:0;font-family:var(--font-text);font-weight:400;font-size:32px;line-height:1.75;letter-spacing:-.012em;color:var(--cata-navy);text-wrap:pretty}
-/* A blank: an inline button; under 800px a long one wraps inside the sentence with each line underlined. */
+/* A blank: an inline :is(button,[role=button]); under 800px a long one wraps inside the sentence with each line underlined. */
 .gs-tok{padding:0 8px;border-bottom:2px solid var(--cata-navy);border-radius:2px 2px 0 0;-webkit-box-decoration-break:clone;box-decoration-break:clone;color:var(--cata-navy);font-weight:700;cursor:pointer;transition:background-color var(--dur-base) var(--ease-out)}
 .gs-tok.is-empty{border-bottom-style:dashed;border-bottom-color:var(--cata-teal);color:var(--cata-teal)}
 .gs-tok:hover,.gs-tok[aria-expanded=true]{background:var(--cata-mint);border-bottom-color:var(--cata-navy);color:var(--cata-navy)}
@@ -523,7 +523,7 @@ details.acc .acc__body{padding:0 0 var(--s-5)}.acc__body ul{margin:0}
   .gs{margin-top:var(--s-7)}
   .gs-bar{min-height:64px;gap:14px;padding:14px 18px}
   .gs-bar__text{font-size:17px}
-  .gs-bar__btn{display:none}  /* decorative; the bar itself is the button */
+  .gs-bar__btn{display:none}  /* decorative; the bar itself is the :is(button,[role=button]) */
   .gs-panel{gap:20px;padding:20px 18px}
   .gs-panel__top{gap:12px}
   .gs-sentence{font-size:22px;line-height:1.6}
@@ -660,7 +660,7 @@ details.acc .acc__body{padding:0 0 var(--s-5)}.acc__body ul{margin:0}
 .how-card__head{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
 .how-card__step{margin:0;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--cata-teal)}
 .how-card h3{margin:0}
-.how-card h3 button{padding:0;border:0;background:none;cursor:pointer;text-align:left;font:700 23px/1.25 var(--font-text);letter-spacing:-0.012em;color:inherit}
+.how-card h3 :is(button,[role=button]){padding:0;border:0;background:none;cursor:pointer;text-align:left;font:700 23px/1.25 var(--font-text);letter-spacing:-0.012em;color:inherit}
 .how-card>p{margin:0;font-size:16px;line-height:1.6;color:var(--cata-ink-2);text-wrap:pretty}
 .how-card[data-role="dark"]{background:var(--cata-navy);border-color:var(--cata-navy);color:var(--cata-cream)}
 .how-card[data-role="dark"] .how-card__step{color:var(--cata-lime)}
@@ -780,7 +780,7 @@ a.lead-partner:hover span{text-decoration:underline;text-decoration-color:var(--
 }
 
 /* To 1200px (raised from the brand's 1100px when the menu became "Partnership Opportunities", user, 2026-10-06: the one-line
-   header needs about 1180px): the Menu button opens a drawer of the section menus, each opening in place. */
+   header needs about 1180px): the Menu :is(button,[role=button]) opens a drawer of the section menus, each opening in place. */
 @media(max-width:1200px){
   :root{--header-h:76px;--brand-h:76px}
   .js .nav-toggle{display:inline-flex;margin-left:auto}.global-header__inner{min-height:76px;gap:0 var(--s-4);flex-wrap:wrap}
@@ -842,7 +842,7 @@ a.lead-partner:hover span{text-decoration:underline;text-decoration-color:var(--
   .row--split .row__end .btn{width:100%}
   .facts{gap:var(--s-4) var(--s-6)}
   .tabs{max-width:100%;overflow-x:auto;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
-  .tabs a,.tabs button{white-space:nowrap;flex-shrink:0}
+  .tabs a,.tabs :is(button,[role=button]){white-space:nowrap;flex-shrink:0}
   .jump .container{flex-wrap:wrap}
   .jump .jump__right--select{width:100%;margin:0 0 6px}.jump .jump__right--select select{width:100%}
   .jump .jump__right:not(.jump__right--select){display:none} /* the sticky lime bar carries the action on phones */
@@ -967,9 +967,9 @@ a.pp-contact__name:hover{color:var(--cata-lime);text-decoration:none}
 .dir .dir-sort{font-size:15px}
 .dir .dir-sort select{height:44px;padding-block:0;font-size:15px}
 .dir-seg{display:flex;gap:2px;padding:3px;border:1px solid var(--cata-rule);border-radius:var(--radius-2);background:var(--cata-paper)}
-.dir-seg button{display:flex;align-items:center;gap:8px;height:40px;padding:0 16px;border:0;border-radius:var(--radius-1);background:transparent;color:var(--cata-navy);font:600 15px/1 var(--font-text);cursor:pointer;transition:background-color var(--dur-base) var(--ease-out),color var(--dur-base) var(--ease-out)}
-.dir-seg button:hover{background:var(--cata-cream)}
-.dir-seg button[aria-pressed=true]{background:var(--cata-navy);color:var(--cata-cream)}
+.dir-seg :is(button,[role=button]){display:flex;align-items:center;gap:8px;height:40px;padding:0 16px;border:0;border-radius:var(--radius-1);background:transparent;color:var(--cata-navy);font:600 15px/1 var(--font-text);cursor:pointer;transition:background-color var(--dur-base) var(--ease-out),color var(--dur-base) var(--ease-out)}
+.dir-seg :is(button,[role=button]):hover{background:var(--cata-cream)}
+.dir-seg :is(button,[role=button])[aria-pressed=true]{background:var(--cata-navy);color:var(--cata-cream)}
 .dir-seg .icon{width:16px;height:16px}
 .dir-empty{padding:48px 0;border-top:1px solid var(--cata-rule);border-bottom:1px solid var(--cata-rule);display:flex;flex-direction:column;gap:var(--s-3);align-items:flex-start}
 .dir-empty h3{margin:0}.dir-empty p{margin:0;color:var(--cata-ink-2);max-width:52ch}
@@ -1087,7 +1087,7 @@ a.pp-contact__name:hover{color:var(--cata-lime);text-decoration:none}
 .dir-pin--provider.dir-pin--group span{width:auto;min-width:22px;height:22px;padding:0 4px;font-size:12px}  /* several providers' offices together */
 .dir-pop{position:absolute;z-index:3;padding:4px 8px 4px 16px;overflow-y:auto;background:var(--cata-paper);border:1px solid var(--cata-rule);border-radius:var(--radius-3);box-shadow:var(--shadow-2);pointer-events:auto}  /* a popover may cast a shadow */
 .dir-pop__head{display:flex;align-items:center;justify-content:space-between;gap:var(--s-3);color:var(--cata-ink-2)}
-.dir-pop__head button{width:44px;height:44px;border:0;background:none;cursor:pointer;color:var(--cata-navy);display:flex;align-items:center;justify-content:center}
+.dir-pop__head :is(button,[role=button]){width:44px;height:44px;border:0;background:none;cursor:pointer;color:var(--cata-navy);display:flex;align-items:center;justify-content:center}
 .dir-pop__head svg,.dir-card__close svg{width:12px;height:12px;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;fill:none}
 .dir-pop__item{display:flex;flex-direction:column;gap:2px;width:calc(100% + 8px);margin-left:-8px;text-align:left;padding:12px 8px;border:0;border-top:1px solid var(--cata-rule);background:none;cursor:pointer;color:var(--cata-navy);font:inherit}
 .dir-pop__item strong{font-size:15px;line-height:1.35}.dir-pop__item span{font-size:13.5px;color:var(--cata-ink-2)}
@@ -1099,7 +1099,7 @@ a.dir-pop__item,a.dir-pop__item:hover,a.dir-pin,a.dir-pin:hover{text-decoration:
 /* Program Directory: the count of statewide programs shown, which aren't shaded on the map; it filters to them. */
 .dir-map__statewide{position:absolute;left:16px;bottom:16px;z-index:3;height:40px;padding:0 16px;border:1px solid var(--cata-navy);border-radius:var(--radius-pill);background:var(--cata-paper);color:var(--cata-navy);font:600 14.5px/1 var(--font-text);cursor:pointer;transition:background-color var(--dur-base) var(--ease-out),color var(--dur-base) var(--ease-out)}
 .dir-map__statewide:hover,.dir-map__statewide[aria-pressed="true"]{background:var(--cata-navy);color:var(--cata-cream)}
-.dir-map__stage.has-statewide .dir-empty-map{bottom:72px}  /* the no-results note clears the statewide button */
+.dir-map__stage.has-statewide .dir-empty-map{bottom:72px}  /* the no-results note clears the statewide :is(button,[role=button]) */
 .dir-empty-map{position:absolute;left:16px;right:16px;bottom:16px;z-index:3;margin:0;padding:16px;background:var(--cata-paper);border:1px solid var(--cata-rule);border-radius:var(--radius-2);color:var(--cata-ink-2)}
 .dir-map__legend{display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:space-between;align-items:center;padding:14px 20px;border-top:1px solid var(--cata-rule);background:var(--cata-paper);font-size:14px;color:var(--cata-ink-2)}
 .dir-map__legend span{display:flex;align-items:center;gap:8px}
@@ -1141,12 +1141,12 @@ a.dir-pop__item,a.dir-pop__item:hover,a.dir-pin,a.dir-pin:hover{text-decoration:
 .dir-card--list .dir-card__name{margin:8px 0 16px;font-size:22px;line-height:1.25}
 .dir-plist{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--cata-rule)}
 .dir-plist li{border-top:1px solid var(--cata-rule)}
-.dir-plist button{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;width:100%;padding:14px 0;border:0;background:none;text-align:left;color:var(--cata-navy);font:inherit;cursor:pointer;transition:color var(--dur-base) var(--ease-out)}
-.dir-plist button:hover{color:var(--cata-teal)}
-.dir-plist button>span{display:flex;flex-direction:column;gap:4px;min-width:0}
+.dir-plist :is(button,[role=button]){display:flex;justify-content:space-between;gap:16px;align-items:flex-start;width:100%;padding:14px 0;border:0;background:none;text-align:left;color:var(--cata-navy);font:inherit;cursor:pointer;transition:color var(--dur-base) var(--ease-out)}
+.dir-plist :is(button,[role=button]):hover{color:var(--cata-teal)}
+.dir-plist :is(button,[role=button])>span{display:flex;flex-direction:column;gap:4px;min-width:0}
 .dir-plist strong{font-size:16px;line-height:1.3;font-weight:700}
-.dir-plist button>span>span{font-size:14px;line-height:1.45;color:var(--cata-ink-2)}
-.dir-plist button>span>.mono{margin-top:2px;font-size:11px;letter-spacing:.14em;color:var(--cata-ink-2)}
+.dir-plist :is(button,[role=button])>span>span{font-size:14px;line-height:1.45;color:var(--cata-ink-2)}
+.dir-plist :is(button,[role=button])>span>.mono{margin-top:2px;font-size:11px;letter-spacing:.14em;color:var(--cata-ink-2)}
 .dir-plist .icon{flex:none;width:14px;height:14px;margin-top:4px}
 .dir-foot{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;margin-top:24px;font-size:14px;color:var(--cata-ink-2)}
 .dir-foot p{margin:0}
@@ -1177,17 +1177,17 @@ a.dir-pop__item,a.dir-pop__item:hover,a.dir-pin,a.dir-pin:hover{text-decoration:
 .deadline__n--word{font-size:var(--t-h5)}
 .eo-pager{display:flex;flex-wrap:wrap;gap:var(--s-4);justify-content:space-between;align-items:center;padding-top:var(--s-6);color:var(--cata-ink-2);font-size:15px}
 .eo-pager nav{display:flex;flex-wrap:wrap;gap:8px}
-.eo-pager button{min-width:40px;height:40px;padding:0 12px;border:1px solid var(--cata-rule);border-radius:var(--radius-1);background:#fff;color:var(--cata-navy);font:inherit;font-weight:600;cursor:pointer}
-.eo-pager button[aria-current=page]{background:var(--cata-navy);border-color:var(--cata-navy);color:var(--cata-cream)}
-.eo-pager button:disabled{opacity:.4;cursor:default}
+.eo-pager :is(button,[role=button]){min-width:40px;height:40px;padding:0 12px;border:1px solid var(--cata-rule);border-radius:var(--radius-1);background:#fff;color:var(--cata-navy);font:inherit;font-weight:600;cursor:pointer}
+.eo-pager :is(button,[role=button])[aria-current=page]{background:var(--cata-navy);border-color:var(--cata-navy);color:var(--cata-cream)}
+.eo-pager :is(button,[role=button]):disabled{opacity:.4;cursor:default}
 /* Events & Opportunities calendar view: a month grid, events and opportunity deadlines on their dates, the chosen day's rows below */
 .eo-cal__head{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--s-2) var(--s-4);margin-bottom:var(--s-4)}
 .eo-cal__title{margin:0;font-size:var(--t-h5)}
 .eo-cal__count{font-size:12px;color:var(--cata-ink-3)}
 .eo-cal__nav{display:flex;gap:8px;margin-left:auto}
-.eo-cal__nav button{height:40px;padding:0 16px;border:1px solid var(--cata-rule);border-radius:var(--radius-1);background:#fff;color:var(--cata-navy);font:inherit;font-size:14px;font-weight:600;cursor:pointer}
-.eo-cal__nav button:not(:disabled):hover{border-color:var(--cata-navy)}
-.eo-cal__nav button:disabled{opacity:.4;cursor:default}
+.eo-cal__nav :is(button,[role=button]){height:40px;padding:0 16px;border:1px solid var(--cata-rule);border-radius:var(--radius-1);background:#fff;color:var(--cata-navy);font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.eo-cal__nav :is(button,[role=button]):not(:disabled):hover{border-color:var(--cata-navy)}
+.eo-cal__nav :is(button,[role=button]):disabled{opacity:.4;cursor:default}
 .eo-cal__grid{width:100%;table-layout:fixed;border-collapse:collapse;background:#fff;border:1px solid var(--cata-rule)}
 .eo-cal__grid th{padding:10px 8px;border-bottom:1px solid var(--cata-rule);font-family:var(--font-mono);font-size:11px;font-weight:500;letter-spacing:var(--ls-eyebrow);text-transform:uppercase;text-align:left;color:var(--cata-ink-3)}
 .eo-cal__grid abbr{text-decoration:none}
@@ -1195,10 +1195,10 @@ a.dir-pop__item,a.dir-pop__item:hover,a.dir-pin,a.dir-pin:hover{text-decoration:
 .eo-cal__pad{background:var(--cata-cream)}
 .eo-cal__cell.is-selected{box-shadow:inset 0 0 0 2px var(--cata-navy)}
 .eo-cal__date{position:relative;display:inline-grid;place-items:center;min-width:28px;height:28px;padding:0 6px;border:0;border-radius:var(--radius-pill);background:none;color:var(--cata-navy);font:inherit;font-size:13px;font-weight:600}
-button.eo-cal__date{cursor:pointer}
-button.eo-cal__date:hover{background:var(--cata-cream)}
+:is(button,[role=button]).eo-cal__date{cursor:pointer}
+:is(button,[role=button]).eo-cal__date:hover{background:var(--cata-cream)}
 .is-past .eo-cal__date{color:var(--cata-ink-3);font-weight:400}
-.is-today .eo-cal__date,.is-today button.eo-cal__date:hover{background:var(--cata-navy);color:#fff}
+.is-today .eo-cal__date,.is-today :is(button,[role=button]).eo-cal__date:hover{background:var(--cata-navy);color:#fff}
 .eo-cal__date[aria-pressed=true],.eo-cal__date[aria-pressed=true]:hover{background:var(--cata-lime);color:var(--cata-navy)}
 .eo-cal__items{list-style:none;margin:4px 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:3px}  /* long titles end in "…" inside the day */
 .eo-cal__item{display:block;width:100%;overflow:hidden;padding:3px 6px;border:0;border-left:3px solid;border-radius:var(--radius-1);font:inherit;font-size:12px;line-height:1.35;white-space:nowrap;text-overflow:ellipsis;text-align:left;color:var(--cata-navy);cursor:pointer}
@@ -1216,7 +1216,7 @@ button.eo-cal__date:hover{background:var(--cata-cream)}
 .eo-cal__all{margin-top:var(--s-4);padding:0;border:0;background:none;color:var(--cata-navy);font:inherit;font-size:14px;font-weight:600;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
 .eo-cal__hint,.eo-cal__note{margin:var(--s-3) 0 0;color:var(--cata-ink-3)}
 @media(max-width:720px){  /* phones: a dot marks each day with listings; choosing it lists them below */
-  .eo-cal__nav{margin-left:0;width:100%}.eo-cal__nav button{flex:1}
+  .eo-cal__nav{margin-left:0;width:100%}.eo-cal__nav :is(button,[role=button]){flex:1}
   .eo-cal__grid th{padding:8px 0;text-align:center;letter-spacing:.04em}
   .eo-cal__grid td{height:52px;padding:4px 0;text-align:center}
   .eo-cal__items,.eo-cal__more,.eo-cal__legend{display:none}
@@ -1323,7 +1323,7 @@ a.res__row:hover{transform:translateY(-2px);border-color:var(--cata-navy)}
 /* ---------- shared filter sidebar (2026-10-04): Events & Opportunities, Partner and Program Directories ----------
    common.facet_layout / facet_sidebar / facet_group; site.js facetUI. A 280px rail of collapsible checkbox groups beside
    the results; under a 900px container width a "Show filters (N)" pill folds it away (the rail shows without JS).
-   .is-bar on the wrapper (the directory's map view) lays the same groups out as dropdown buttons with popover panels;
+   .is-bar on the wrapper (the directory's map view) lays the same groups out as dropdown :is(button,[role=button])s with popover panels;
    site.js moves Clear all and the search after the groups there, so the reading order matches the row. */
 .hl{padding:0 6px;border-radius:var(--radius-1);-webkit-box-decoration-break:clone;box-decoration-break:clone;background:var(--chip-type);color:var(--cata-navy)}
 .hl--aud{background:var(--chip-aud)}.hl--region{background:var(--chip-region)}.hl--area{background:var(--chip-area)}
@@ -1440,7 +1440,7 @@ a.res__row:hover{transform:translateY(-2px);border-color:var(--cata-navy)}
 .gs--form .gs-actions:has(.gs-reset[hidden]){display:none}
 .gs-fallback{display:grid;gap:var(--s-4)}
 @media(max-width:640px){.gs--form .gs-panel{padding:16px}.gs--form .gs-sentence{font-size:20px;line-height:1.75}}
-/* "Can't find what you're looking for?" (2026-10-05): the empty states' second button, and the referral form's "From your search" */
+/* "Can't find what you're looking for?" (2026-10-05): the empty states' second :is(button,[role=button]), and the referral form's "From your search" */
 .dir-empty__actions{display:flex;flex-wrap:wrap;gap:var(--s-3)}
 .gs-from{display:grid;gap:6px;padding:14px 16px;border-left:3px solid var(--cata-teal);background:color-mix(in oklab,var(--cata-mint) 30%,#fff);border-radius:0}
 .gs-from[hidden]{display:none}

@@ -778,7 +778,7 @@
         const k = st.tok;
         closeTok(e.shiftKey);
         if (e.shiftKey) return;
-        const order = [...panel.querySelectorAll('button, a[href], [data-gs-tok]')].filter(b => !b.disabled && b.offsetParent !== null);
+        const order = [...panel.querySelectorAll('button, a[href], [role="button"], [data-gs-tok]')].filter(b => !b.disabled && b.offsetParent !== null);
         (order[order.indexOf(tokBtn(k)) + 1] || afterSentence() || order[0]).focus();
       }
     });
@@ -2040,3 +2040,6 @@
   window.addEventListener('resize', fit);
   if ('ResizeObserver' in window) new ResizeObserver(fit).observe(side);  // logos and fonts change its height as they load
 })();
+
+// Webflow copy: the builder turns <button> into links with role=button; Enter and Space activate them like buttons.
+document.addEventListener('keydown', e => { const t = e.target; if ((e.key === 'Enter' || e.key === ' ') && t instanceof Element && t.matches('a[role="button"]:not([href])')) { e.preventDefault(); t.click(); } });
