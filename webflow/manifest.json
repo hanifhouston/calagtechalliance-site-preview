@@ -25,7 +25,7 @@
    "newsletter": false,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 59131
+   "bytes": 58419
   },
   {
    "url": "/events-opportunities/",
@@ -49,7 +49,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 123966
+   "bytes": 123610
   },
   {
    "url": "/events-opportunities/share/",
@@ -69,7 +69,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 5197
+   "bytes": 4841
   },
   {
    "url": "/stories/",
@@ -99,7 +99,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 1972
+   "bytes": 1616
   },
   {
    "url": "/join/",
@@ -114,7 +114,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 11685
+   "bytes": 11329
   },
   {
    "url": "/referral/",
@@ -134,7 +134,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 22353
+   "bytes": 21997
   },
   {
    "url": "/stories/share/",
@@ -149,7 +149,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 6458
+   "bytes": 6102
   },
   {
    "url": "/programs/submit/",
@@ -164,7 +164,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 10276
+   "bytes": 9920
   },
   {
    "url": "/accessibility/",

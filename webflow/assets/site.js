@@ -11,7 +11,7 @@
   const lis = nav ? [...nav.querySelectorAll('.mnav-li')] : [];
   const scrim = nav && nav.querySelector('[data-mnav-scrim]');
   let openLi = null;
-  lis.forEach(li => { li.querySelector('[data-mnav-link]').hidden = true; li.querySelector('[data-mnav-trigger]').hidden = false; });
+  lis.forEach(li => { li.querySelector('[data-mnav-link]').hidden = true; li.querySelector('[data-mnav-trigger]').hidden = false; li.querySelector('[data-mnav-panel]').hidden = true; });
   const setPanel = (li, refocus = false) => {
     const was = openLi;
     lis.forEach(x => {
