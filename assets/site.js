@@ -2154,6 +2154,9 @@
 (() => {
   // Webflow copy: the filter sidebars are wrapped in forms there (the builder accepts fields only inside a form); they
   // filter in place and never submit, and Webflow's own form handler must not see them.
+  // Webflow binds its own jQuery submit handler to every form it wraps; our forms (filters, the guided search, GET forms) take it off.
+  const unhook = f => { try { if (window.jQuery) window.jQuery(f).off('submit'); } catch (e) { /* no jQuery */ } };
+  document.querySelectorAll('form[data-cata-form], form[data-cata-get], form[data-gs-panel]').forEach(unhook);
   document.querySelectorAll('form[data-cata-form]').forEach(f => f.addEventListener('submit', e => { e.preventDefault(); e.stopImmediatePropagation(); }, true));
 })();
 
