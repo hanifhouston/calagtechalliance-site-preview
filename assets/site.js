@@ -2213,3 +2213,18 @@
     const wrap = root.querySelector('[data-st-more-wrap]'); if (wrap) wrap.hidden = false;
   }
 })();
+
+(() => {
+  // Webflow copy: the 2021 header and footer (still on the convening and Password pages) and any old bookmark link to
+  // sections of the former home (/#who-we-serve, /#partners, /#sign-up, /#convening). The 2026 home has no such ids, so
+  // land those hashes on the matching 2026 sections. Inert anywhere else.
+  if (!document.getElementById('gs-panel')) return;
+  const ALIAS = { 'who-we-serve': 'start-heading', 'partners': 'featured-partner', 'sign-up': 'newsletter', 'convening': 'coming-up' };
+  const go = () => {
+    const to = ALIAS[location.hash.slice(1)];
+    const el = to && document.getElementById(to);
+    if (el) el.scrollIntoView({ block: 'start' });
+  };
+  go();
+  window.addEventListener('hashchange', go);
+})();

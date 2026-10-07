@@ -2214,5 +2214,20 @@
   }
 })();
 
+(() => {
+  // Webflow copy: the 2021 header and footer (still on the convening and Password pages) and any old bookmark link to
+  // sections of the former home (/#who-we-serve, /#partners, /#sign-up, /#convening). The 2026 home has no such ids, so
+  // land those hashes on the matching 2026 sections. Inert anywhere else.
+  if (!document.getElementById('gs-panel')) return;
+  const ALIAS = { 'who-we-serve': 'start-heading', 'partners': 'featured-partner', 'sign-up': 'newsletter', 'convening': 'coming-up' };
+  const go = () => {
+    const to = ALIAS[location.hash.slice(1)];
+    const el = to && document.getElementById(to);
+    if (el) el.scrollIntoView({ block: 'start' });
+  };
+  go();
+  window.addEventListener('hashchange', go);
+})();
+
 // Webflow copy: the builder turns <button> into links with role=button; Enter and Space activate them like buttons.
 document.addEventListener('keydown', e => { const t = e.target; if ((e.key === 'Enter' || e.key === ' ') && t instanceof Element && t.matches('a[role="button"]:not([href])')) { e.preventDefault(); t.click(); } });
