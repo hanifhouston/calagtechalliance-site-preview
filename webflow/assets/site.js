@@ -2052,6 +2052,8 @@
   const ppRoot = document.querySelector('[data-pp-slug]');
   if (ppRoot) (() => {
     const slug = ppRoot.getAttribute('data-pp-slug');
+    const ppName = (document.querySelector('h1') || {}).textContent;
+    if (ppName && ppName.trim()) document.title = ppName.trim() + ' — Partner Directory — California AgTech Alliance';
     const dirEl = document.getElementById('directory-data');
     const progEl = document.getElementById('pp-programs-data');
     const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -2099,6 +2101,8 @@
   const root = document.querySelector('[data-nr-slug]');
   if (!root) return;
   const slug = root.getAttribute('data-nr-slug');
+  const nrTitle = (root.querySelector('h1') || {}).textContent;
+  if (nrTitle && nrTitle.trim()) document.title = nrTitle.trim() + ' — Newsroom — California AgTech Alliance';
   const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const NE = '<svg class="icon icon-arrow-ne" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3.5 10.5 L 10.5 3.5"/><path d="M5 3.5 L 10.5 3.5 L 10.5 9"/></svg>';
   const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
