@@ -2155,11 +2155,11 @@
   // Webflow copy: the filter sidebars are wrapped in forms there (the builder accepts fields only inside a form); they
   // filter in place and never submit, and Webflow's own form handler must not see them.
   // Webflow handles every `.w-form form` submit through a delegated document listener (AJAX to Webflow Forms, then its
-  // success state). The forms this script runs (filters, GET forms, the guided search) leave that wrapper class and stop
-  // the event before the document, so only their own handlers see it.
+  // success state). The forms this script runs (filters, GET forms, the guided search) leave that wrapper class, so the
+  // delegated selector no longer matches them and only their own handlers see the submit.
+  // (A capture-phase stopPropagation on the form would also silence the form's own bubble listeners, so the class alone does it.)
   document.querySelectorAll('form[data-cata-form], form[data-cata-get], form[data-gs-panel]').forEach(f => {
     const wrap = f.closest('.w-form'); if (wrap) wrap.classList.remove('w-form');
-    f.addEventListener('submit', e => e.stopPropagation(), true);
   });
   document.querySelectorAll('form[data-cata-form]').forEach(f => f.addEventListener('submit', e => { e.preventDefault(); e.stopImmediatePropagation(); }, true));
 })();
