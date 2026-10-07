@@ -25,7 +25,7 @@
    "newsletter": false,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 58419
+   "bytes": 57473
   },
   {
    "url": "/events-opportunities/",
@@ -49,7 +49,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 123610
+   "bytes": 16856
   },
   {
    "url": "/events-opportunities/share/",
@@ -242,9 +242,9 @@
     }
    ],
    "newsletter": true,
-   "has_form": false,
+   "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 57448
+   "bytes": 18632
   },
   {
    "url": "/programs/",
@@ -262,9 +262,9 @@
     }
    ],
    "newsletter": true,
-   "has_form": false,
+   "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 131860
+   "bytes": 16071
   },
   {
    "url": "/stories/what-we-learned-from-australia/",

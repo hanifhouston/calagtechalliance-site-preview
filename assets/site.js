@@ -2143,3 +2143,9 @@
     }
   }
 })();
+
+(() => {
+  // Webflow copy: the filter sidebars are wrapped in forms there (the builder accepts fields only inside a form); they
+  // filter in place and never submit, and Webflow's own form handler must not see them.
+  document.querySelectorAll('form[data-cata-form]').forEach(f => f.addEventListener('submit', e => { e.preventDefault(); e.stopImmediatePropagation(); }, true));
+})();

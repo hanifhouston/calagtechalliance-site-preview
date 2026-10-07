@@ -2144,5 +2144,11 @@
   }
 })();
 
+(() => {
+  // Webflow copy: the filter sidebars are wrapped in forms there (the builder accepts fields only inside a form); they
+  // filter in place and never submit, and Webflow's own form handler must not see them.
+  document.querySelectorAll('form[data-cata-form]').forEach(f => f.addEventListener('submit', e => { e.preventDefault(); e.stopImmediatePropagation(); }, true));
+})();
+
 // Webflow copy: the builder turns <button> into links with role=button; Enter and Space activate them like buttons.
 document.addEventListener('keydown', e => { const t = e.target; if ((e.key === 'Enter' || e.key === ' ') && t instanceof Element && t.matches('a[role="button"]:not([href])')) { e.preventDefault(); t.click(); } });
