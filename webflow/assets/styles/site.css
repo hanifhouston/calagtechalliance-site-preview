@@ -1499,6 +1499,6 @@ a.res__row:hover{transform:translateY(-2px);border-color:var(--cata-navy)}
 .lead-figure figcaption{margin-top:12px}
 
 /* Webflow-only */
-.cata-top{display:contents}.w-input,.w-select{height:auto;margin-bottom:0;line-height:inherit;display:block}textarea.w-input{height:auto}.newsletter form label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.w-form-done,.w-form-fail{margin-top:16px;padding:16px;border-radius:8px}.w-form-done{background:#dff5e8;color:#0b2131}.w-form-fail{background:#fde8e8;color:#7a1f1f}
+.cata-top{display:contents}.mnav-groups[data-mnav-cols="1"]{--mnav-cols:1}.mnav-groups[data-mnav-cols="2"]{--mnav-cols:2}.mnav-groups[data-mnav-cols="4"]{--mnav-cols:4}.w-input,.w-select{height:auto;margin-bottom:0;line-height:inherit;display:block}textarea.w-input{height:auto}.newsletter form label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.w-form-done,.w-form-fail{margin-top:16px;padding:16px;border-radius:8px}.w-form-done{background:#dff5e8;color:#0b2131}.w-form-fail{background:#fde8e8;color:#7a1f1f}
 .cata-fallback{margin:24px auto;max-width:72ch;padding:16px 20px;border:1px solid var(--cata-rule);border-radius:8px;background:#fff}
 .w-webflow-badge{display:none!important}
