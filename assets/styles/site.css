@@ -48,7 +48,7 @@ h2 a:hover,h3 a:hover{color:inherit;text-decoration:underline;text-decoration-co
 .container--narrow{max-width:960px}
 .eyebrow{font-family:var(--font-mono);font-size:var(--t-eyebrow);font-weight:500;letter-spacing:var(--ls-eyebrow);text-transform:uppercase;color:var(--cata-teal);margin:0 0 var(--s-3);line-height:1.5}
 /* Every mono metadata role: 12px Medium, ALL CAPS, +.12em. Component rules below set only color and spacing. */
-.mono,.prose figcaption,.chip,.mast__crumbs,.mast__host,.mast__meta,.facts dt,.jump__label,.facet-bar .count,.rail__side h4,.row__date,.row__meta,.side-card dt,.pullquote cite,.ph,.map-ph,.footer-credit,.footer-policies{font-family:var(--font-mono);font-size:var(--t-eyebrow);font-weight:500;letter-spacing:var(--ls-meta);text-transform:uppercase}
+.mono,.prose figcaption,.chip,.mast__crumbs,.mast__host,.mast__meta,.facts dt,.jump__label,.facet-bar .count,.rail__side h4,.row__date,.row__meta,.side-card dt,.pullquote cite,.ph,.map-ph,.footer-slot,.footer-policies{font-family:var(--font-mono);font-size:var(--t-eyebrow);font-weight:500;letter-spacing:var(--ls-meta);text-transform:uppercase}
 .mono{color:var(--cata-ink-3)}
 .mono .text-link{font-family:var(--font-text);font-size:var(--t-body-sm);letter-spacing:0;text-transform:none}
 .lede{font-size:var(--t-body-lg);line-height:1.55;color:var(--cata-ink-2);max-width:740px}
@@ -445,7 +445,10 @@ details.acc .acc__body{padding:0 0 var(--s-5)}.acc__body ul{margin:0}
 .site-footer a{color:var(--fg-2);font-size:var(--t-body-sm);font-weight:500;line-height:1.35;text-decoration:none;transition:color var(--dur-base) var(--ease-out)}
 .site-footer a:hover,.site-footer a[aria-current]{color:var(--cata-lime)}
 .footer-base{border-top:1px solid var(--cata-rule-dark);margin-top:var(--s-8);padding-top:var(--s-5);display:flex;justify-content:space-between;align-items:center;gap:var(--s-5);flex-wrap:wrap}
-.footer-credit{margin:0;max-width:64ch;color:var(--fg-2);line-height:1.6}  /* the anchor and funder credit line (audit, 2026-10-06) */
+.footer-slots{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-4)}
+.footer-logo{display:flex;align-items:center;height:40px}  /* the white funder logos sit straight on the navy (user, 2026-10-06) */
+.footer-logo img{display:block;height:100%;width:auto;max-width:260px;object-fit:contain}
+.footer-slot{display:flex;align-items:center;justify-content:center;height:40px;min-width:120px;padding:0 var(--s-4);border:1px dashed var(--fg-3);border-radius:var(--radius-2);color:var(--fg-2)}  /* stands in for a missing logo file */
 .footer-policies{display:flex;flex-wrap:wrap;gap:var(--s-2) var(--s-5);color:var(--fg-2)}
 .footer-policies a{font-size:inherit;font-weight:inherit;color:inherit}
 .stickybar{display:none}
