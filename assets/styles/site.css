@@ -446,8 +446,8 @@ details.acc .acc__body{padding:0 0 var(--s-5)}.acc__body ul{margin:0}
 .site-footer a:hover,.site-footer a[aria-current]{color:var(--cata-lime)}
 .footer-base{border-top:1px solid var(--cata-rule-dark);margin-top:var(--s-8);padding-top:var(--s-5);display:flex;justify-content:space-between;align-items:center;gap:var(--s-5);flex-wrap:wrap}
 .footer-slots{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-4)}
-.footer-logo{display:flex;align-items:center;height:40px}  /* the white funder logos sit straight on the navy (user, 2026-10-06) */
-.footer-logo img{display:block;height:100%;width:auto;max-width:260px;object-fit:contain}
+.footer-logo{display:flex;align-items:center;height:24px;opacity:.92}  /* the white funder logos sit straight on the navy, small, at the old slots' scale (user, 2026-10-06) */
+.footer-logo img{display:block;height:100%;width:auto;max-width:180px;object-fit:contain}
 .footer-slot{display:flex;align-items:center;justify-content:center;height:40px;min-width:120px;padding:0 var(--s-4);border:1px dashed var(--fg-3);border-radius:var(--radius-2);color:var(--fg-2)}  /* stands in for a missing logo file */
 .footer-policies{display:flex;flex-wrap:wrap;gap:var(--s-2) var(--s-5);color:var(--fg-2)}
 .footer-policies a{font-size:inherit;font-weight:inherit;color:inherit}
