@@ -53,7 +53,7 @@
     else if (openLi && !openLi.contains(to)) setPanel(null);  // Tab past the open panel
   });
   // Following a menu link closes the menu (a link to a section of this page would otherwise leave it open over the section).
-  nav?.addEventListener('click', event => { if (event.target.closest('a[href]') && (openLi || menu?.classList.contains('is-open'))) closeMenu(); });
+  nav?.addEventListener('click', event => { if (event.target.closest('a[href]:not([role=button])') && (openLi || menu?.classList.contains('is-open'))) closeMenu(); });  // not the triggers: on Webflow they are <a role=button href="#"> (export_webflow.py), and this handler was closing every panel the instant it opened (found live 2026-10-07)
   window.addEventListener('pageshow', event => { if (event.persisted) closeMenu(); });
   document.addEventListener('keydown', event => {
     if (event.key !== 'Escape') return;
