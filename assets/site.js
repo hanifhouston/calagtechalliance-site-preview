@@ -303,7 +303,7 @@
       showSet: (name, placeholder) => {
         closeDropdown();
         groups.forEach(g => { if (g.dataset.facetSet) g.hidden = g.dataset.facetSet !== name; });
-        if (search && placeholder) { search.placeholder = placeholder; wrap.querySelector(`label[for="${search.id}"]`).textContent = placeholder; }
+        if (search && placeholder) { search.placeholder = placeholder; const lbl = wrap.querySelector(`label[for="${search.id}"]`) || wrap.querySelector('.facets__search label'); if (lbl) { lbl.textContent = placeholder; lbl.htmlFor = search.id; } }  // Webflow's builder drops the label's for
         api.refresh();
       },
       // Counts (user, 2026-10-06): countFor(key, value) is how many results that choice would give with the other filters
