@@ -2157,5 +2157,17 @@
   document.querySelectorAll('form[data-cata-form]').forEach(f => f.addEventListener('submit', e => { e.preventDefault(); e.stopImmediatePropagation(); }, true));
 })();
 
+(() => {
+  // Webflow copy: a GET form (the Events & Open Calls quick form) navigates to its destination with its fields as the
+  // query; Webflow's own handler would post it to Webflow Forms instead.
+  document.querySelectorAll('form[data-cata-get]').forEach(f => f.addEventListener('submit', e => {
+    e.preventDefault(); e.stopImmediatePropagation();
+    if (typeof f.reportValidity === 'function' && !f.reportValidity()) return;
+    const q = new URLSearchParams();
+    new FormData(f).forEach((v, k) => { if (typeof v === 'string' && v !== '') q.append(k, v); });
+    location.href = f.getAttribute('data-cata-get') + (q.toString() ? '?' + q : '');
+  }, true));
+})();
+
 // Webflow copy: the builder turns <button> into links with role=button; Enter and Space activate them like buttons.
 document.addEventListener('keydown', e => { const t = e.target; if ((e.key === 'Enter' || e.key === ' ') && t instanceof Element && t.matches('a[role="button"]:not([href])')) { e.preventDefault(); t.click(); } });
