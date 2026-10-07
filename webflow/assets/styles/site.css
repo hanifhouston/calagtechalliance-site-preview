@@ -1,3 +1,5 @@
+/* Webflow tag styles from the old site (All H2 Headings etc.) are neutralised here; our own rules below override these. */
+h1,h2,h3,h4,h5,h6,p,li,blockquote{color:inherit}
 /* Webflow copy (export_webflow.py): JetBrains Mono is the site's uploaded custom font. */
 /* California AgTech Alliance — site composition implementing the Page Template Layout System (Oct 2026).
    Tokens (colors, type faces, scales) come from tokens.css. Surfaces: cream ground, paper working bands, white cards,
