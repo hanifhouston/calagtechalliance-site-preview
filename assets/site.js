@@ -2171,7 +2171,8 @@
     e.preventDefault(); e.stopImmediatePropagation();
     if (typeof f.reportValidity === 'function' && !f.reportValidity()) return;
     const q = new URLSearchParams();
-    new FormData(f).forEach((v, k) => { if (typeof v === 'string' && v !== '') q.append(k, v); });
+    // Webflow's builder renames some fields (name="title" became field-2), so the sync key names the parameter where there is one.
+    [...f.elements].forEach(el => { if (!el.name || el.disabled || ((el.type === 'checkbox' || el.type === 'radio') && !el.checked)) return; const v = el.value; if (v !== '') q.append(el.dataset.eoSync || el.name, v); });
     location.href = f.getAttribute('data-cata-get') + (q.toString() ? '?' + q : '');
   }, true));
 })();
