@@ -27,8 +27,8 @@ h1,h2,h3,h4,h5,h6,p,li,blockquote{color:inherit}
 html{scroll-behavior:smooth;scroll-padding-top:var(--header-h)}
 body{margin:0;background:var(--cata-cream);color:var(--cata-navy);font-family:var(--font-text);font-size:var(--t-body);line-height:var(--lh-body)}
 img{max-width:100%;height:auto}
-a{color:var(--cata-teal);text-underline-offset:4px;text-decoration-thickness:1px;transition:color var(--dur-base) var(--ease-out),text-decoration-color var(--dur-base) var(--ease-out),text-decoration-thickness var(--dur-base) var(--ease-out)}
-a:hover{color:var(--cata-teal-deep);text-decoration-thickness:2px}
+a:where(:not([role=button],[role=tab])){color:var(--cata-teal);text-underline-offset:4px;text-decoration-thickness:1px;transition:color var(--dur-base) var(--ease-out),text-decoration-color var(--dur-base) var(--ease-out),text-decoration-thickness var(--dur-base) var(--ease-out)}
+a:where(:not([role=button],[role=tab])):hover{color:var(--cata-teal-deep);text-decoration-thickness:2px}
 /* tokens.css draws the lime 2px ring at a 2px offset; the navy band fills the offset so the ring reads on light grounds. */
 :focus-visible{box-shadow:0 0 0 2px var(--cata-navy)}
 main:focus-visible{outline:0;box-shadow:none}
@@ -781,9 +781,11 @@ a.lead-partner:hover span{text-decoration:underline;text-decoration-color:var(--
   .mast.mast--stack{padding:var(--s-7) 0 0}  /* the photo runs to the hero's edge (the ≤640 .mast padding left a navy strip) */
 }
 
-/* To 1200px (raised from the brand's 1100px when the menu became "Partnership Opportunities", user, 2026-10-06: the one-line
-   header needs about 1180px): the Menu :is(button,[role=button]) opens a drawer of the section menus, each opening in place. */
-@media(max-width:1200px){
+/* The design's header (user, 2026-10-07 "keep my design"): the nav tightens below 1100px as in the Oct 6 design file, and the
+   Menu :is(button,[role=button])'s drawer takes over below 1060px, where the one-line header stops fitting (measured 1044px with the design's labels
+   "Partners" and "Events & Opportunities"; it was 1200px with "Partnership Opportunities", user, 2026-10-06). */
+@media(max-width:1100px){.mnav-list{gap:0 18px}.mnav-link,.mnav-trigger{font-size:13.5px}.global-header__inner{gap:var(--s-4)}}
+@media(max-width:1060px){
   :root{--header-h:76px;--brand-h:76px}
   .js .nav-toggle{display:inline-flex;margin-left:auto}.global-header__inner{min-height:76px;gap:0 var(--s-4);flex-wrap:wrap}
   html:not(.js) .global-header{position:static}  /* without the script the menu is a plain list of links, so the header doesn't stick */

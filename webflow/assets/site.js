@@ -5,12 +5,12 @@
   const optOf = i => i.closest('.facet__opt') || i.closest('[data-kind]') || i.closest('label');  // the option row (Webflow nests its own label inside)
   // Site navigation (site_builder/navigation.py; the user's design of 2026-10-05). Each section's name becomes a button that
   // opens its panel (without the script it's a link to the section's overview page). One panel at a time; Escape, a click
-  // outside or on the scrim, or focus leaving the panel closes it. Under 1200px the Menu button opens the drawer, where the
+  // outside or on the scrim, or focus leaving the panel closes it. Under 1060px the Menu button opens the drawer, where the
   // panels open in place.
   const nav = document.querySelector('[data-mnav]');
   const menu = document.querySelector('#primary-menu');
   const toggle = document.querySelector('[data-menu-toggle]');
-  const narrow = window.matchMedia('(max-width: 1200px)');  // the drawer (site.css; 1200px since 2026-10-06)
+  const narrow = window.matchMedia('(max-width: 1060px)');  // the drawer (site.css; 1060px since 2026-10-07, 1200px before)
   const lis = nav ? [...nav.querySelectorAll('.mnav-li')] : [];
   const scrim = nav && nav.querySelector('[data-mnav-scrim]');
   let openLi = null;
@@ -1904,7 +1904,8 @@
 (() => {
   const list = document.querySelector('[data-aud-tabs]');
   if (!list) return;
-  const tabs = [...list.querySelectorAll('[role=tab]')];
+  const tabs = [...list.querySelectorAll('[role=tab],.aud-tab')];
+  tabs.forEach(t => t.setAttribute('role', 'tab'));  // the Webflow copy's builder gave them role=button (fixed in export_webflow.py; this covers pages built before)
   const pick = (tab, focus) => {
     tabs.forEach(t => {
       const on = t === tab;
@@ -1920,6 +1921,7 @@
       const step = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
       const to = step ? tabs[(i + step + tabs.length) % tabs.length] : e.key === 'Home' ? tabs[0] : e.key === 'End' ? tabs[tabs.length - 1] : null;
       if (to) { e.preventDefault(); pick(to, true); }
+      else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(t); }  // the Webflow copy's tabs are links, not buttons
     });
   });
 })();
