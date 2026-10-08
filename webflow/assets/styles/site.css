@@ -880,6 +880,13 @@ a.lead-partner:hover span{text-decoration:underline;text-decoration-color:var(--
 .gmap--pending{display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(135deg,#e9ece6 0 10px,#e2e6e0 10px 20px)}
 .gmap__note{text-align:center}.gmap__note p{margin:6px 0 0}.gmap__note .mono{color:var(--cata-navy)}
 .gmap-wrap{margin-top:28px}.gmap-wrap .gmap{margin-top:0}
+/* Partner profile map on Webflow: the directory's California geometry with a pin per place (site.js; 2026-10-07). */
+.pp-map{position:relative;margin-top:24px;height:420px;border:1px solid var(--cata-rule);border-radius:8px;overflow:hidden;background:color-mix(in oklab,var(--cata-teal) 7%,var(--cata-cream))}
+.pp-map svg{display:block;width:100%;height:100%}
+.pp-map__pin circle{fill:var(--cata-navy);stroke:var(--cata-paper);stroke-width:3}
+.pp-map__label{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;fill:var(--cata-navy);paint-order:stroke;stroke:var(--cata-cream);stroke-width:3px;stroke-linejoin:round}
+.pp-map__note{position:absolute;left:16px;bottom:12px;margin:0;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--cata-ink-3)}
+@media(max-width:640px){.pp-map{height:320px}}
 /* Partner profile (the user's profile design of 2026-10-06; records._render_profile): a back link, a header card (logo,
    Member pill, name, tagline, website, Request a referral), then the body beside a sticky sidebar (facts as tags, the navy
    Contact card, Suggest an edit). Section heads are small teal labels over a navy rule. */

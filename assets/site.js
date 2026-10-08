@@ -2093,43 +2093,39 @@
         const sec = ppRoot.querySelector('[data-pp-sec="programs"]'); if (sec) sec.hidden = false;
       }
     }
-    // The Locations map (records._map_embed on the local build; the Oct 6 profile design shows it under the addresses): with a
-    // Google Maps key (window.CATA_MAPS_KEY, written by export_webflow.py from config.json) a styled map with one pin per place;
-    // without one, the design's quiet placeholder panel. Places come from the directory data (coords + city).
+    // The Locations map (the Oct 6 profile design shows it under the addresses). The site's own California map with a pin
+    // per place (the directory's geometry and Mercator projection; no Google key needed — user, 2026-10-07 "just use pins").
+    // Places come from the directory data (coords + city); places outside California are left off.
     const locSec = ppRoot.querySelector('[data-pp-sec="locations"]');
     const places = (org.places || []).filter(p => p && p.coords && p.coords.length === 2);
-    if (locSec && !locSec.hidden && places.length && !locSec.querySelector('.gmap')) {
-      const count = places.length + (places.length === 1 ? ' location' : ' locations');
-      const key = window.CATA_MAPS_KEY;
-      if (!key) {
-        locSec.insertAdjacentHTML('beforeend', '<div class="gmap gmap--pending" role="region" aria-label="Map of locations"><div class="gmap__note"><span class="mono">Map · ' + count + '</span><p class="small">Appears when a Google Maps key is added to the build.</p></div></div>');
-      } else {
-        const id = 'gmap-' + slug;
-        locSec.insertAdjacentHTML('beforeend', '<div class="gmap-wrap" role="region" aria-label="Map of locations"><div class="gmap" id="' + id + '"></div></div>');
-        const STYLE = [{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"color":"#cfe3e9"}]},{"featureType":"landscape","stylers":[{"color":"#f3f3ef"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#ffffff"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#dcdfd9"}]},{"elementType":"labels.text.fill","stylers":[{"color":"#5c6c78"}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#dcdfd9"}]}];
-        window.__allianceMaps = (window.__allianceMaps || []);
-        window.__allianceMaps.push({ id, pins: places.map(p => ({ lat: p.coords[1], lng: p.coords[0], title: org.name + (p.city ? ' · ' + p.city : ''), html: '<strong>' + esc(org.name) + '</strong>' + (p.city ? '<br>' + esc(p.city) : '') })) });
-        window.initAllianceMaps = window.initAllianceMaps || function () {
-          const G = google.maps, iw = new G.InfoWindow();
-          window.__allianceMaps.forEach(m => {
-            const el = document.getElementById(m.id); if (!el || el.dataset.done) return; el.dataset.done = '1';
-            const map = new G.Map(el, { zoom: 12, disableDefaultUI: true, zoomControl: true, styles: STYLE, backgroundColor: '#f3f3ef' });
-            const b = new G.LatLngBounds();
-            m.pins.forEach(p => {
-              const pos = new G.LatLng(p.lat, p.lng);
-              const mk = new G.Marker({ position: pos, map, title: p.title });
-              mk.addListener('click', () => { iw.setContent(p.html); iw.open({ anchor: mk, map }); });
-              b.extend(pos);
-            });
-            if (m.pins.length > 1) map.fitBounds(b, 80); else { map.setCenter(b.getCenter()); map.setZoom(14); }
-          });
-        };
-        if (!document.querySelector('script[data-cata-gmaps]')) {
-          const sc = document.createElement('script'); sc.async = true; sc.defer = true; sc.setAttribute('data-cata-gmaps', '');
-          sc.src = 'https://maps.googleapis.com/maps/api/js?key=' + encodeURIComponent(key) + '&callback=initAllianceMaps';
-          document.body.appendChild(sc);
-        } else if (window.google && window.google.maps) window.initAllianceMaps();
-      }
+    if (locSec && !locSec.hidden && places.length && !locSec.querySelector('.pp-map')) {
+      const css = document.querySelector('link[href*="/styles/site.css"]');
+      const geoUrl = css ? css.getAttribute('href').replace(/\/styles\/site\.css.*$/, '/network-directory-geo.json') : '/assets/network-directory-geo.json';
+      fetch(geoUrl).then(r => r.json()).then(geo => {
+        const polys = g => (g.type === 'Polygon' ? [g.coordinates] : g.coordinates);
+        const mx = lo => lo * Math.PI / 180, my = la => -Math.log(Math.tan(Math.PI / 4 + la * Math.PI / 360));
+        const ca = geo.states.find(st => st.id === '06'); if (!ca) return;
+        let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+        polys(ca.geometry).forEach(p => p.forEach(ring => ring.forEach(([lo, la]) => { const x = mx(lo), y = my(la); x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y); })));
+        const W = 640, H = 420, pad = 24;
+        const k = Math.min((W - 2 * pad) / (x1 - x0), (H - 2 * pad) / (y1 - y0));
+        const tx = (W - k * (x1 - x0)) / 2 - k * x0, ty = (H - k * (y1 - y0)) / 2 - k * y0;
+        const proj = (lo, la) => [k * mx(lo) + tx, k * my(la) + ty];
+        const path = gs => gs.map(g => polys(g).map(p => p.map(ring => 'M' + ring.map(([lo, la]) => { const [x, y] = proj(lo, la); return x.toFixed(1) + ',' + y.toFixed(1); }).join('L') + 'Z').join('')).join('')).join('');
+        const inCA = ([lo, la]) => { const x = mx(lo), y = my(la); return x >= x0 - 0.01 && x <= x1 + 0.01 && y >= y0 - 0.01 && y <= y1 + 0.01; };
+        const pins = places.filter(p => inCA(p.coords)); if (!pins.length) return;
+        const count = pins.length + (pins.length === 1 ? ' location' : ' locations');
+        const pinSvg = pins.map(p => { const [x, y] = proj(p.coords[0], p.coords[1]); const right = x < W * 0.62;
+          return '<g class="pp-map__pin"><circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="9"/>' +
+            (p.city ? '<text class="pp-map__label" x="' + (right ? x + 16 : x - 16).toFixed(1) + '" y="' + (y + 4).toFixed(1) + '" text-anchor="' + (right ? 'start' : 'end') + '">' + esc(p.city) + '</text>' : '') +
+            '<title>' + esc(p.city || org.name) + '</title></g>'; }).join('');
+        locSec.insertAdjacentHTML('beforeend', '<div class="pp-map" role="img" aria-label="Map: ' + esc(count) + (pins.length <= 3 ? ', ' + esc(pins.map(p => p.city).filter(Boolean).join(', ')) : '') + '">' +
+          '<svg viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">' +
+          '<path class="dir-map__land" d="' + path(geo.states.filter(st => st.id !== '06').map(st => st.geometry)) + '"/>' +
+          '<path class="dir-map__other" d="' + path((geo.counties || []).map(c => c.geometry)) + '"/>' +
+          '<path class="dir-map__outline" d="' + path([ca.geometry]) + '"/>' + pinSvg + '</svg>' +
+          '<p class="pp-map__note mono">Map · ' + esc(count) + '</p></div>');
+      }).catch(() => {});
     }
   })();
 })();
