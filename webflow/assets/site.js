@@ -2266,5 +2266,107 @@
   window.addEventListener('hashchange', go);
 })();
 
+(() => {
+  // Innovation Grants applications: the startup application (/innovation-grants-apply, site_builder/grants_apply.py) and the
+  // provider intake (/innovation-grants-service-providers, grants_providers.py); the user's designs of 2026-10-09.
+  // A form preview: nothing is sent. Budget rows (add, remove, renumber, row and request totals with the $50,000 limit), the
+  // justification's word count, chosen file names, and a preview submit that swaps the form for the result (success, or the
+  // state named by ?result=failed|unknown). Inert on every other page.
+  const form = document.querySelector('form[data-ig-app]');
+  if (!form) return;
+  const wrap = form.closest('.w-form'); if (wrap) wrap.classList.remove('w-form');  // Webflow copy: keep Webflow Forms off it
+  const view = document.querySelector('[data-ig-form-view]');
+  const result = document.querySelector('[data-ig-result]');
+  const money = n => n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+  const num = v => Math.max(0, parseFloat(v) || 0);
+  const LIMIT = 50000;
+  const rows = form.querySelector('[data-ig-rows]');
+  if (rows) {
+    const first = rows.querySelector('[data-ig-row]');
+    const blank = first.cloneNode(true);
+    const add = form.querySelector('[data-ig-add]');
+    const total = form.querySelector('[data-ig-total]');
+    const over = form.querySelector('[data-ig-over]');
+    const update = () => {
+      const all = [...rows.querySelectorAll('[data-ig-row]')];
+      let sum = 0;
+      all.forEach((r, i) => {
+        const t = num(r.querySelector('[data-ig-rate]').value) * num(r.querySelector('[data-ig-qty]').value);
+        sum += t;
+        r.querySelector('[data-ig-row-total]').textContent = money(t);
+        r.querySelector('[data-ig-row-n]').textContent = 'Service ' + (i + 1);
+        r.querySelector('[data-ig-remove]').hidden = all.length < 2;
+      });
+      total.textContent = money(sum);
+      total.parentElement.classList.toggle('is-over', sum > LIMIT);
+      if (over) over.hidden = sum <= LIMIT;
+    };
+    if (add) {
+      add.hidden = false;
+      add.addEventListener('click', e => {
+        e.preventDefault();
+        const row = blank.cloneNode(true);
+        rows.appendChild(row);
+        update();
+        row.querySelector('input').focus();
+      });
+    }
+    rows.addEventListener('input', update);
+    rows.addEventListener('click', e => {
+      const btn = e.target.closest('[data-ig-remove]');
+      if (!btn) return;
+      e.preventDefault();
+      const row = btn.closest('[data-ig-row]');
+      const next = row.nextElementSibling || row.previousElementSibling;
+      row.remove();
+      update();
+      next?.querySelector('input')?.focus();
+    });
+    update();
+  }
+  form.querySelectorAll('[data-ig-words]').forEach(t => {
+    const count = t.parentElement.querySelector('[data-ig-count]');
+    const max = 250;
+    const set = () => {
+      const w = t.value.trim() ? t.value.trim().split(/\s+/).length : 0;
+      count.textContent = w + ' / ' + max + ' words' + (w > max ? ' · over the limit' : '');
+      count.classList.toggle('is-over', w > max);
+    };
+    t.addEventListener('input', set);
+    set();
+  });
+  form.querySelectorAll('[data-ig-file]').forEach(inp => {
+    const name = inp.closest('label').querySelector('[data-ig-file-name]');
+    inp.addEventListener('change', () => {
+      const files = [...(inp.files || [])].map(f => f.name);
+      name.textContent = files.length ? files.join(', ') : name.dataset.empty;
+    });
+  });
+  const show = state => {
+    result.querySelectorAll('[data-ig-state]').forEach(s => { s.hidden = s.dataset.igState !== state; });
+    view.hidden = true;
+    result.hidden = false;
+    window.scrollTo(0, 0);
+    result.querySelector('[data-ig-state="' + state + '"] .iga-result__h')?.focus();
+  };
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (form.hasAttribute('data-ig-closed')) return;  // provider intake not open yet
+    result.querySelectorAll('[data-ig-receipt]').forEach(dd => {
+      const src = form.querySelector('[data-ig-' + dd.dataset.igReceipt + ']');
+      const v = src ? src.value.trim() : '';
+      if (v) dd.textContent = v;
+    });
+    const asked = new URLSearchParams(location.search).get('result');
+    show(['failed', 'unknown'].includes(asked) ? asked : 'success');
+  });
+  result.querySelectorAll('[data-ig-back]').forEach(b => b.addEventListener('click', e => {
+    e.preventDefault();
+    result.hidden = true;
+    view.hidden = false;
+    window.scrollTo(0, 0);
+  }));
+})();
+
 // Webflow copy: the builder turns <button> into links with role=button; Enter and Space activate them like buttons.
 document.addEventListener('keydown', e => { const t = e.target; if ((e.key === 'Enter' || e.key === ' ') && t instanceof Element && t.matches('a[role="button"]:not([href])')) { e.preventDefault(); t.click(); } });
