@@ -1868,7 +1868,8 @@ a.ig-bar__label:hover{color:var(--cata-teal);text-decoration:underline}
 }
 
 /* ---------------------------------------------------------------------------
-   2026 Annual Convening (site_builder/convening.py, 2026-10-10): the event page on the site's own components. Speakers
+   2026 Annual Convening (site_builder/convening.py, 2026-10-10): the event page on the site's own components; the photo
+   masthead carries the date, time and location in a facts row. Speakers
    are one grid of compact grayscale portraits with name, title and organization; the agenda is a ruled list with the
    breaks and lunch quieter; Plan your visit is the closing band with the arrival details.
    --------------------------------------------------------------------------- */
@@ -1876,16 +1877,9 @@ a.ig-bar__label:hover{color:var(--cata-teal);text-decoration:underline}
 .cv-hero__grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-6) 4rem;align-items:end}
 .cv-hero h1{margin:0;font-size:clamp(40px,5vw,72px);line-height:1.02;letter-spacing:-.02em}
 .cv-hero__intro{margin:0;max-width:720px;color:var(--cata-cream);opacity:.86;font-size:clamp(16px,1.4vw,19px);line-height:1.55}
-.cv-hero .actions{margin-top:var(--s-5)}
-.cv-details{background:var(--cata-cream);padding:0 0 4rem}
-.cv-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0}
-.cv-facts__col{padding:2.5rem 2.25rem 0;border-left:1px solid var(--cata-rule)}
-.cv-facts__col:first-child{padding-left:0;border-left:0}
-.cv-facts dt{color:var(--cata-ink-3);margin:0}
-.cv-facts dd{margin:0}
-.cv-facts .cv-facts__val{margin-top:.875rem;font-size:1.5rem;font-weight:700;line-height:1.3;color:var(--cata-navy)}
-.cv-facts .cv-facts__sub{margin-top:.75rem;font-size:1.125rem;line-height:1.6;color:var(--cata-ink-2)}
-.cv-facts__sub a{color:var(--cata-navy)}.cv-facts__sub a:hover{color:var(--cata-teal-deep)}
+.cv-hero .facts{display:grid;grid-template-columns:auto auto minmax(0,1fr);margin-top:var(--s-7)}
+.cv-hero .facts dd{font-size:var(--t-body-lg)}
+.cv-hero__sub{display:block;margin-top:2px;font-size:var(--t-body);font-weight:400;opacity:.8}
 .cv-about p{font-size:var(--t-body-lg);line-height:1.55}
 .cv-reasons{margin-top:var(--s-7)}
 .cv-reasons .goal h3{font-size:var(--t-body-lg);line-height:1.3}
@@ -1920,8 +1914,8 @@ a.ig-bar__label:hover{color:var(--cata-teal);text-decoration:underline}
 @media(max-width:980px){
   .cv-hero{padding:6rem 0 4rem;min-height:0}
   .cv-hero__grid{grid-template-columns:minmax(0,1fr)}
-  .cv-facts{grid-template-columns:minmax(0,1fr)}
-  .cv-facts__col{padding:var(--s-5) 0;border-left:0;border-bottom:1px solid var(--cata-rule)}
+  .cv-hero .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cv-hero .facts>div:last-child{grid-column:1/-1}
   .cv-reasons{grid-template-columns:repeat(2,minmax(0,1fr))}
   .cv-people{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
