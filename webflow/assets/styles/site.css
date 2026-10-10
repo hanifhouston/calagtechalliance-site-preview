@@ -1874,14 +1874,11 @@ a.ig-bar__label:hover{color:var(--cata-teal);text-decoration:underline}
    --------------------------------------------------------------------------- */
 .cv-hero{padding:9rem 0 5rem}
 .cv-hero__grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-6) 4rem;align-items:end}
-.cv-hero .eyebrow{color:var(--cata-lime);margin-bottom:var(--s-4)}
 .cv-hero h1{margin:0;font-size:clamp(40px,5vw,72px);line-height:1.02;letter-spacing:-.02em}
 .cv-hero__intro{margin:0;max-width:720px;color:var(--cata-cream);opacity:.86;font-size:clamp(16px,1.4vw,19px);line-height:1.55}
 .cv-hero .actions{margin-top:var(--s-5)}
-.cv-details{background:var(--cata-cream);padding:var(--s-5) 0 4rem}
-.cv-details .mast__crumbs{color:var(--cata-teal);margin:0;padding-bottom:var(--s-5)}
-.cv-details .mast__crumbs>span{color:var(--cata-ink-2)}
-.cv-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0;border-top:1px solid var(--cata-rule)}
+.cv-details{background:var(--cata-cream);padding:0 0 4rem}
+.cv-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0}
 .cv-facts__col{padding:2.5rem 2.25rem 0;border-left:1px solid var(--cata-rule)}
 .cv-facts__col:first-child{padding-left:0;border-left:0}
 .cv-facts dt{color:var(--cata-ink-3);margin:0}
