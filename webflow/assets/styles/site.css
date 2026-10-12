@@ -1900,11 +1900,9 @@ a.ig-bar__label:hover{color:var(--cata-teal);text-decoration:underline}
 .cv-slot--pause .cv-slot__time{color:var(--cata-ink-3)}
 .cv-extra .card__body{padding:var(--s-6);display:flex;flex-direction:column;gap:var(--s-2)}
 .cv-extra .eyebrow,.cv-extra h3,.cv-extra p{margin:0}
-.cv-extra .badges{margin-bottom:var(--s-1)}
 .cv-extra__place{font-weight:600}
 .cv-extra p:last-child{margin-top:var(--s-2);color:var(--cata-ink-2)}
-.cv-thrive{margin:var(--s-7) 0 0}
-.cv-thrive>div{max-width:760px}
+.cv-thrive{margin:0;flex-direction:column;align-items:flex-start;justify-content:space-between}
 .cv-thrive h3{margin-bottom:var(--s-2)}
 .cv-visit .container>div:first-child{max-width:760px}
 .cv-visit p:where(:not(.eyebrow))+p{margin-top:var(--s-4)}
