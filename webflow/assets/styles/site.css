@@ -1509,6 +1509,8 @@ a.res__row:hover{transform:translateY(-2px);border-color:var(--cata-navy)}
 .lead-figure{margin:0 0 40px}
 .lead-figure img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:8px}
 .lead-figure figcaption{margin-top:12px}
+/* Story captions sit flush left (user, 2026-10-19); on Webflow this outweighs its centered figcaption and .w-richtext figure figcaption defaults. */
+.lead-figure figcaption,.prose figure figcaption,.prose .w-richtext figure figcaption{text-align:left}
 
 /* ---------- Innovation Grants (/innovation-grants/; the user's design "Innovation Grants - Standalone", 2026-10-09; site_builder/grants.py) ---------- */
 /* Review strip and the dotted "to confirm" underline, shown while grants.DRAFT is True. */
