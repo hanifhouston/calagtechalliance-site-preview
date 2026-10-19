@@ -271,7 +271,7 @@ details.acc[open] .acc__icon{transform:rotate(45deg)}
 /* Stories: the type bar under the masthead, one type at a time (2026-10-06; support_pages._story_type_bar, site.js) */
 .story-types__opts{display:flex;flex-wrap:wrap;gap:var(--s-2)}
 html:not(.js) .story-types__opts{display:none}  /* the :is(button,[role=button])s need site.js; html.js is set before the first paint, so no shift */
-.story-type{min-height:40px;padding:0 var(--s-4);border:1px solid var(--cata-rule);border-radius:var(--radius-pill);background:#fff;color:var(--cata-navy);font:600 15px/1 var(--font-text);cursor:pointer;transition:border-color var(--dur-base) var(--ease-out),background-color var(--dur-base) var(--ease-out),color var(--dur-base) var(--ease-out)}
+.story-type{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 var(--s-4);border:1px solid var(--cata-rule);border-radius:var(--radius-pill);background:#fff;color:var(--cata-navy);font:600 15px/1 var(--font-text);cursor:pointer;transition:border-color var(--dur-base) var(--ease-out),background-color var(--dur-base) var(--ease-out),color var(--dur-base) var(--ease-out)}
 .story-type:hover{border-color:var(--cata-navy)}
 .story-type[aria-pressed=true]{background:var(--cata-navy);border-color:var(--cata-navy);color:var(--cata-cream)}
 .tabs{display:inline-flex;gap:var(--s-1);background:var(--cata-navy);padding:4px;border-radius:var(--radius-pill)}
