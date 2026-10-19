@@ -2368,5 +2368,30 @@
   }));
 })();
 
+(() => {
+  // Innovation Grants: the embedded Qualtrics forms grow to their content, so the page scrolls and the frame never does
+  // (2026-10-19). A script in each survey's header posts {cata: 'qualtrics-height', height, page} to this page (the snippet is
+  // in planning/Qualtrics embed height script.md). Until a message arrives the frame keeps its CSS height and scrolls inside,
+  // so the form still works without the survey script. When the survey moves to a new page while its top is out of view,
+  // the frame is scrolled back into view (below the sticky header, by scroll-padding-top).
+  const frames = [...document.querySelectorAll('iframe.ig-embed__frame')];
+  if (!frames.length) return;
+  window.addEventListener('message', e => {
+    if (!/^https:\/\/[a-z0-9.-]+\.qualtrics\.com$/.test(e.origin)) return;
+    const d = e.data;
+    if (!d || d.cata !== 'qualtrics-height') return;
+    const frame = frames.find(f => f.contentWindow === e.source);
+    const h = Math.ceil(Number(d.height));
+    if (!frame || !(h > 0)) return;
+    Object.assign(frame.style, { height: Math.min(h, 20000) + 'px', minHeight: '0', maxHeight: 'none' });
+    frame.setAttribute('scrolling', 'no');
+    const page = String(d.page || '');
+    if (frame.dataset.igPage && page && page !== frame.dataset.igPage && frame.getBoundingClientRect().top < 0) {
+      frame.scrollIntoView({ block: 'start' });
+    }
+    if (page) frame.dataset.igPage = page;
+  });
+})();
+
 // Webflow copy: the builder turns <button> into links with role=button; Enter and Space activate them like buttons.
 document.addEventListener('keydown', e => { const t = e.target; if ((e.key === 'Enter' || e.key === ' ') && t instanceof Element && t.matches('a[role="button"]:not([href])')) { e.preventDefault(); t.click(); } });
