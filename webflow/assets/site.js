@@ -1683,7 +1683,7 @@
       const meta = (opp ? ['Deadline: ' + (i.when ? esc(when(i.date_short_due)) : 'Rolling'), who]
         : [[when(i.date_short), i.time_short].filter(Boolean).map(esc).join(', '), esc(i.place_short), i.who_url ? who : '']).filter(Boolean).join(' | ');
       const summary = esc(i.desc);
-      const action = i.alliance || !opp ? 'Details' : (D.apply.includes(i.category) ? 'Apply' : 'Learn more');
+      const action = i.cta || (i.alliance || !opp ? 'Details' : (D.apply.includes(i.category) ? 'Apply' : 'Learn more'));  // cta: an Alliance event's own label (Register)
       return `<article class="deadline-row">${tile}<div><p class="eyebrow">${esc(i.type)}</p><h3><a href="${esc(href)}">${esc(i.title)}</a></h3>` +
         (summary ? `<p>${summary}</p>` : '') + `<p class="mono eo-meta">${meta}</p></div>` +
         `<div class="deadline-row__end"><a class="text-link" href="${esc(href)}">${action} ${ARROW}</a></div></article>`;
