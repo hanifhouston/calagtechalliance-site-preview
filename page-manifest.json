@@ -1,10 +1,25 @@
 {
-  "built_pages": 115,
+  "built_pages": 120,
   "pages": [
     {
       "url": "/",
       "title": "California AgTech Alliance",
       "section": "home"
+    },
+    {
+      "url": "/innovation-grants/",
+      "title": "Innovation Grants",
+      "section": "grants"
+    },
+    {
+      "url": "/innovation-grants/apply/",
+      "title": "Innovation Grants Startup Application",
+      "section": "grants"
+    },
+    {
+      "url": "/innovation-grants/service-providers/",
+      "title": "Innovation Grants for Service Providers",
+      "section": "grants"
     },
     {
       "url": "/events-opportunities/",
@@ -75,6 +90,11 @@
       "url": "/programs/",
       "title": "Program Directory",
       "section": "resources"
+    },
+    {
+      "url": "/stories/building-the-bridge-2026-convening/",
+      "title": "Building the Bridge: What We Heard at the 2026 California AgTech Alliance Convening",
+      "section": "stories"
     },
     {
       "url": "/stories/what-we-learned-from-australia/",
@@ -549,6 +569,11 @@
     {
       "url": "/newsroom/",
       "title": "Newsroom",
+      "section": "newsroom"
+    },
+    {
+      "url": "/newsroom/innovation-grants-2026/",
+      "title": "California AgTech Alliance opens applications for Innovation Grants of up to $50,000",
       "section": "newsroom"
     },
     {

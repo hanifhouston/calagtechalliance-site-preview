@@ -4,7 +4,9 @@
  "flat_addresses": {
   "/programs/submit/": "/submit-a-program",
   "/stories/share/": "/share-your-story",
-  "/events-opportunities/share/": "/share-an-event"
+  "/events-opportunities/share/": "/share-an-event",
+  "/innovation-grants/apply/": "/innovation-grants-apply",
+  "/innovation-grants/service-providers/": "/innovation-grants-service-providers"
  },
  "pages": [
   {
@@ -25,7 +27,52 @@
    "newsletter": false,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 57923
+   "bytes": 57315
+  },
+  {
+   "url": "/innovation-grants/",
+   "webflow_path": "/innovation-grants",
+   "slug": "innovation-grants",
+   "kind": "static",
+   "title": "Innovation Grants — California AgTech Alliance",
+   "description": "Access the expertise, facilities and services you need to test, validate and scale technologies that benefit California agriculture.",
+   "fragment": "pages/innovation-grants.html",
+   "classes_css": "pages/innovation-grants.css",
+   "data": [],
+   "newsletter": false,
+   "has_form": false,
+   "inline_scripts_dropped": 0,
+   "bytes": 25721
+  },
+  {
+   "url": "/innovation-grants/apply/",
+   "webflow_path": "/innovation-grants-apply",
+   "slug": "innovation-grants-apply",
+   "kind": "static",
+   "title": "Innovation Grants Startup Application — California AgTech Alliance",
+   "description": "Submit your startup&#x27;s Innovation Grants application and required supporting materials.",
+   "fragment": "pages/innovation-grants-apply.html",
+   "classes_css": "pages/innovation-grants-apply.css",
+   "data": [],
+   "newsletter": false,
+   "has_form": false,
+   "inline_scripts_dropped": 0,
+   "bytes": 3558
+  },
+  {
+   "url": "/innovation-grants/service-providers/",
+   "webflow_path": "/innovation-grants-service-providers",
+   "slug": "innovation-grants-service-providers",
+   "kind": "static",
+   "title": "Innovation Grants for Service Providers — California AgTech Alliance",
+   "description": "Review service provider categories and complete provider intake for California AgTech Alliance Innovation Grants.",
+   "fragment": "pages/innovation-grants-service-providers.html",
+   "classes_css": "pages/innovation-grants-service-providers.css",
+   "data": [],
+   "newsletter": false,
+   "has_form": false,
+   "inline_scripts_dropped": 0,
+   "bytes": 4336
   },
   {
    "url": "/events-opportunities/",
@@ -49,7 +96,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 17063
+   "bytes": 17062
   },
   {
    "url": "/events-opportunities/share/",
@@ -84,7 +131,7 @@
    "newsletter": true,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 5417
+   "bytes": 6685
   },
   {
    "url": "/contact/",
@@ -217,14 +264,14 @@
    "slug": "events/annual-convening-2026",
    "kind": "static",
    "title": "2026 Annual Convening — California AgTech Alliance",
-   "description": "Farmer perspectives, project showcases, and working conversations about the future of agricultural technology in California.",
+   "description": "Join Alliance members and partners on October 13 in Santa Clara for farmer perspectives, project showcases, and working conversations about the future of agricultural technology in California.",
    "fragment": "pages/events__annual-convening-2026.html",
    "classes_css": "pages/events__annual-convening-2026.css",
    "data": [],
    "newsletter": true,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 2722
+   "bytes": 17267
   },
   {
    "url": "/directory/",
@@ -267,6 +314,21 @@
    "bytes": 16241
   },
   {
+   "url": "/stories/building-the-bridge-2026-convening/",
+   "webflow_path": "/stories/building-the-bridge-2026-convening",
+   "slug": "stories/building-the-bridge-2026-convening",
+   "kind": "template",
+   "title": "Building the Bridge: What We Heard at the 2026 California AgTech Alliance Convening — California AgTech Alliance",
+   "description": "California does not lack promising ideas, agricultural expertise or technical talent. The challenge is connecting them. Here is what we heard at the 2026 Annual Convening.",
+   "fragment": "pages/stories__building-the-bridge-2026-convening.html",
+   "classes_css": "pages/stories__building-the-bridge-2026-convening.css",
+   "data": [],
+   "newsletter": true,
+   "has_form": false,
+   "inline_scripts_dropped": 0,
+   "bytes": 22107
+  },
+  {
    "url": "/stories/what-we-learned-from-australia/",
    "webflow_path": "/stories/what-we-learned-from-australia",
    "slug": "stories/what-we-learned-from-australia",
@@ -279,7 +341,7 @@
    "newsletter": true,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 11694
+   "bytes": 12793
   },
   {
    "url": "/stories/building-californias-statewide-front-door-for-agricultural-innovation/",
@@ -294,7 +356,7 @@
    "newsletter": true,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 8123
+   "bytes": 9222
   },
   {
    "url": "/directory/action-council-and-mujeres-en-accion/",
@@ -1689,7 +1751,22 @@
    "newsletter": true,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 11033
+   "bytes": 11517
+  },
+  {
+   "url": "/newsroom/innovation-grants-2026/",
+   "webflow_path": "/newsroom/innovation-grants-2026",
+   "slug": "newsroom/innovation-grants-2026",
+   "kind": "template",
+   "title": "California AgTech Alliance opens applications for Innovation Grants of up to $50,000 — California AgTech Alliance",
+   "description": "Service vouchers of up to $50,000 help ag tech startups access field trials, testing and commercialization support. Applications are due Nov. 20, 2026.",
+   "fragment": "pages/newsroom__innovation-grants-2026.html",
+   "classes_css": "pages/newsroom__innovation-grants-2026.css",
+   "data": [],
+   "newsletter": true,
+   "has_form": false,
+   "inline_scripts_dropped": 0,
+   "bytes": 9652
   },
   {
    "url": "/newsroom/crop-robotics-landscape-2026/",
@@ -1704,7 +1781,7 @@
    "newsletter": true,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 8777
+   "bytes": 8789
   },
   {
    "url": "/newsroom/crop-robotics-landscape-2026-advisory/",
@@ -1719,7 +1796,7 @@
    "newsletter": true,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 8149
+   "bytes": 8161
   },
   {
    "url": "/newsroom/innovation-roadmap/",
@@ -1734,7 +1811,7 @@
    "newsletter": true,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 9468
+   "bytes": 9480
   },
   {
    "url": "/newsroom/alliance-launches/",
@@ -1749,7 +1826,7 @@
    "newsletter": true,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 9962
+   "bytes": 9905
   },
   {
    "url": "/newsroom/fira-usa-launch-advisory/",
@@ -1764,7 +1841,7 @@
    "newsletter": true,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 7008
+   "bytes": 6951
   },
   {
    "url": "/404/",
