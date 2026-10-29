@@ -915,9 +915,9 @@ a.lead-partner:hover span{text-decoration:underline;text-decoration-color:var(--
 .pp-offers,.pp-locs{list-style:none;margin:0;padding:0;display:grid;column-gap:40px}
 .pp-offers{grid-template-columns:1fr}
 .pp-offers li{display:flex;flex-direction:column;gap:8px;padding:24px 0 0;margin-bottom:24px;border-top:1px solid var(--cata-rule)}
-.pp-offers li:first-child{border-top:0;padding-top:0}
+.pp-offers li:first-child{border-top:0}
 .pp-offers li:last-child{margin-bottom:0}
-@media (min-width:640px){.pp-offers{grid-template-columns:1fr 1fr}.pp-offers li:nth-child(-n+2){border-top:0;padding-top:0}}
+@media (min-width:640px){.pp-offers{grid-template-columns:1fr 1fr}.pp-offers li:nth-child(-n+2){border-top:0}}
 .pp-offers strong,.pp-locs strong{font-weight:700;font-size:18px;line-height:1.35;color:var(--cata-navy)}
 .pp-offers span{font-size:15.5px;line-height:1.6;color:var(--cata-ink-2);text-wrap:pretty}
 .pp-progs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
