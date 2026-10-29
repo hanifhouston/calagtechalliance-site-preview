@@ -2067,6 +2067,8 @@
     });
     const ref = ppRoot.querySelector('[data-pp-referral]');
     if (ref) ref.setAttribute('href', '/referral?partner=' + encodeURIComponent(slug));
+    const edit = ppRoot.querySelector('.pp-edit');  // suggest-an-edit goes straight to the inbox, with the profile's name in the subject
+    if (edit) edit.setAttribute('href', 'mailto:hrhouston@ucanr.edu' + (ppName && ppName.trim() ? '?subject=' + encodeURIComponent('Suggested edit: ' + ppName.trim()) : ''));
     if (!dirEl) return;
     let dir; try { dir = JSON.parse(dirEl.textContent); } catch (e) { return; }
     const org = (dir.orgs || []).find(o => o.id === slug);
