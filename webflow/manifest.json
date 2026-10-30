@@ -27,7 +27,7 @@
    "newsletter": false,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 58281
+   "bytes": 58269
   },
   {
    "url": "/innovation-grants/",
@@ -131,7 +131,7 @@
    "newsletter": true,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 8146
+   "bytes": 8122
   },
   {
    "url": "/contact/",
@@ -326,7 +326,7 @@
    "newsletter": true,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 9472
+   "bytes": 9375
   },
   {
    "url": "/stories/building-the-bridge-2026-convening/",
@@ -341,7 +341,7 @@
    "newsletter": true,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 23296
+   "bytes": 23284
   },
   {
    "url": "/stories/what-we-learned-from-australia/",
@@ -356,7 +356,7 @@
    "newsletter": true,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 13982
+   "bytes": 13970
   },
   {
    "url": "/stories/building-californias-statewide-front-door-for-agricultural-innovation/",
@@ -371,7 +371,7 @@
    "newsletter": true,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 10411
+   "bytes": 10399
   },
   {
    "url": "/directory/action-council-and-mujeres-en-accion/",
