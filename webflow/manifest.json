@@ -619,14 +619,14 @@
    "slug": "directory/center-for-land-based-learning",
    "kind": "template",
    "title": "Center for Land-Based Learning — California AgTech Alliance",
-   "description": "The Center for Land-Based Learning helps people build careers and connections in agriculture and natural resource stewardship.",
+   "description": "The Center for Land-Based Learning (CLBL) connects people to opportunities in agriculture, environmental stewardship and local food systems through hands-on education and real-world experiences.",
    "fragment": "pages/directory__center-for-land-based-learning.html",
    "classes_css": "pages/directory__center-for-land-based-learning.css",
    "data": [],
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 10854
+   "bytes": 13381
   },
   {
    "url": "/directory/chicostart/",
