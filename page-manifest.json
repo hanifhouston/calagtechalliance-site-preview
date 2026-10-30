@@ -1,5 +1,5 @@
 {
-  "built_pages": 120,
+  "built_pages": 121,
   "pages": [
     {
       "url": "/",
@@ -90,6 +90,11 @@
       "url": "/programs/",
       "title": "Program Directory",
       "section": "resources"
+    },
+    {
+      "url": "/stories/how-ducc-connects-drone-training-to-career-opportunities/",
+      "title": "How DUCC Connects Drone Training to Career Opportunities",
+      "section": "stories"
     },
     {
       "url": "/stories/building-the-bridge-2026-convening/",

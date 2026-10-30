@@ -2373,7 +2373,7 @@
 (() => {
   // Innovation Grants: the embedded Qualtrics forms grow to their content, so the page scrolls and the frame never does
   // (2026-10-19). A script in each survey's header posts {cata: 'qualtrics-height', height, page} to this page (the snippet is
-  // in planning/Qualtrics embed height script.md). Until a message arrives the frame keeps its CSS height and scrolls inside,
+  // in planning/reference/Qualtrics embed height script.md). Until a message arrives the frame keeps its CSS height and scrolls inside,
   // so the form still works without the survey script. When the survey moves to a new page while its top is out of view,
   // the frame is scrolled back into view (below the sticky header, by scroll-padding-top).
   const frames = [...document.querySelectorAll('iframe.ig-embed__frame')];

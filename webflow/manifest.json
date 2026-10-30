@@ -27,7 +27,7 @@
    "newsletter": false,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 58204
+   "bytes": 58281
   },
   {
    "url": "/innovation-grants/",
@@ -131,7 +131,7 @@
    "newsletter": true,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 6685
+   "bytes": 8146
   },
   {
    "url": "/contact/",
@@ -314,6 +314,21 @@
    "bytes": 16241
   },
   {
+   "url": "/stories/how-ducc-connects-drone-training-to-career-opportunities/",
+   "webflow_path": "/stories/how-ducc-connects-drone-training-to-career-opportunities",
+   "slug": "stories/how-ducc-connects-drone-training-to-career-opportunities",
+   "kind": "template",
+   "title": "How DUCC Connects Drone Training to Career Opportunities — California AgTech Alliance",
+   "description": "Drones Uplifting California Communities trains the teachers who bring drone skills into classrooms. In Lincoln, Dan Alcorn is turning that training into class projects and career pathways for his students.",
+   "fragment": "pages/stories__how-ducc-connects-drone-training-to-career-opportunities.html",
+   "classes_css": "pages/stories__how-ducc-connects-drone-training-to-career-opportunities.css",
+   "data": [],
+   "newsletter": true,
+   "has_form": false,
+   "inline_scripts_dropped": 0,
+   "bytes": 9472
+  },
+  {
    "url": "/stories/building-the-bridge-2026-convening/",
    "webflow_path": "/stories/building-the-bridge-2026-convening",
    "slug": "stories/building-the-bridge-2026-convening",
@@ -326,7 +341,7 @@
    "newsletter": true,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 22107
+   "bytes": 23296
   },
   {
    "url": "/stories/what-we-learned-from-australia/",
@@ -341,7 +356,7 @@
    "newsletter": true,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 12793
+   "bytes": 13982
   },
   {
    "url": "/stories/building-californias-statewide-front-door-for-agricultural-innovation/",
@@ -356,7 +371,7 @@
    "newsletter": true,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 9222
+   "bytes": 10411
   },
   {
    "url": "/directory/action-council-and-mujeres-en-accion/",
