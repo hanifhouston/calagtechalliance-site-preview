@@ -1894,6 +1894,8 @@
       if (params.get('title')) full.querySelector('[data-eo-form-types]').focus();
     }
     document.querySelectorAll('.eo-quick, .eo-form').forEach(root => {
+      // The Webflow builder drops the `checked` attribute, so select Event by default when nothing is (2026-10-30).
+      if (!root.querySelector('[data-eo-kind]:checked')) { const first = root.querySelector('[data-eo-kind][value="event"]'); if (first) first.checked = true; }
       root.querySelectorAll('[data-eo-kind]').forEach(r => r.addEventListener('change', () => applyKind(root, r.value)));
       root.querySelector('[data-eo-rolling]')?.addEventListener('change', () => applyKind(root, kindOf(root)));
       applyKind(root, kindOf(root));
