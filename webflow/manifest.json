@@ -27,7 +27,7 @@
    "newsletter": false,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 57315
+   "bytes": 58204
   },
   {
    "url": "/innovation-grants/",
@@ -476,7 +476,7 @@
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 5402
+   "bytes": 6299
   },
   {
    "url": "/directory/blue-rise-ventures/",
@@ -566,7 +566,7 @@
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 6106
+   "bytes": 6055
   },
   {
    "url": "/directory/california-governors-office-of-business-and-economic-development-go-biz/",
@@ -626,7 +626,7 @@
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 10803
+   "bytes": 10854
   },
   {
    "url": "/directory/chicostart/",
@@ -821,7 +821,7 @@
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 3366
+   "bytes": 3333
   },
   {
    "url": "/directory/f3-innovate/",
@@ -866,7 +866,7 @@
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 6375
+   "bytes": 6602
   },
   {
    "url": "/directory/fleishmanhillard/",
@@ -1076,7 +1076,7 @@
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 8764
+   "bytes": 8247
   },
   {
    "url": "/directory/monterey-bay-economic-partnership/",
@@ -1309,14 +1309,14 @@
    "slug": "directory/rancho-cielo-agtech-pathways",
    "kind": "template",
    "title": "Rancho Cielo — California AgTech Alliance",
-   "description": "Rancho Cielo Youth Campus is a Monterey County nonprofit that helps young people facing challenges earn a high school diploma and prepare for work through vocational training.",
+   "description": "Rancho Cielo’s Ag Technology &amp; Mechatronics Program combines academic and vocational learning for young people preparing for employment and further education in partnership with WASC-accredited John Muir Charter Schools.",
    "fragment": "pages/directory__rancho-cielo-agtech-pathways.html",
    "classes_css": "pages/directory__rancho-cielo-agtech-pathways.css",
    "data": [],
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 5832
+   "bytes": 5981
   },
   {
    "url": "/directory/reach/",
@@ -1586,7 +1586,7 @@
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 7897
+   "bytes": 7407
   },
   {
    "url": "/directory/uc-merced-citris/",
@@ -1684,14 +1684,14 @@
    "slug": "directory/western-growers",
    "kind": "template",
    "title": "Western Growers — California AgTech Alliance",
-   "description": "Western Growers supports the fresh produce industry through advocacy, member services, education, and agricultural innovation.",
+   "description": "Founded in 1926, Western Growers represents local and regional family farmers growing fresh produce in Arizona, California, Colorado and New Mexico.",
    "fragment": "pages/directory__western-growers.html",
    "classes_css": "pages/directory__western-growers.css",
    "data": [],
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 6358
+   "bytes": 7722
   },
   {
    "url": "/directory/wet-center/",
