@@ -27,7 +27,7 @@
    "newsletter": false,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 56826
+   "bytes": 56323
   },
   {
    "url": "/innovation-grants/",
@@ -42,7 +42,7 @@
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 25721
+   "bytes": 25742
   },
   {
    "url": "/innovation-grants/apply/",
@@ -116,7 +116,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 4871
+   "bytes": 5612
   },
   {
    "url": "/stories/",
@@ -146,7 +146,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 1616
+   "bytes": 2029
   },
   {
    "url": "/join/",
@@ -161,7 +161,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 11329
+   "bytes": 10893
   },
   {
    "url": "/referral/",
@@ -181,7 +181,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 22057
+   "bytes": 21087
   },
   {
    "url": "/stories/share/",

@@ -3,6 +3,9 @@
   // Webflow copy: the builder drops the hidden attribute; export_webflow.py carries it as data-cata-hidden.
   document.querySelectorAll('[data-cata-hidden]').forEach(el => { el.hidden = true; el.removeAttribute('data-cata-hidden'); });
   document.querySelectorAll('[placeholder="Example text"]').forEach(el => el.removeAttribute('placeholder'));  // the Webflow builder's default placeholder on every field it creates
+  // Webflow copy: the builder cuts a select option's label at an ampersand ("Pest" for "Pest & Disease Management") and keeps the
+  // value whole, so a label that is the start of its own value takes the value as its label (found live 2026-11-01).
+  document.querySelectorAll('select option').forEach(o => { const v = o.value, t = o.textContent; if (v && v !== t && v.includes('&') && v.startsWith(t.trim())) o.textContent = v; });
   const optOf = i => i.closest('.facet__opt') || i.closest('[data-kind]') || i.closest('label');  // the option row (Webflow nests its own label inside)
   // Site navigation (site_builder/navigation.py; the user's design of 2026-10-05). Each section's name becomes a button that
   // opens its panel (without the script it's a link to the section's overview page). One panel at a time; Escape, a click
