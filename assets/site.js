@@ -6,6 +6,21 @@
   // Webflow copy: the builder drops a form's own classes (.form, .form--long, .signup, .eo-form, .eo-quick), so the rows stacked with no
   // gap; export_webflow.py carries them as data-cata-form-class (found live 2026-11-01).
   document.querySelectorAll('form[data-cata-form-class]').forEach(f => f.dataset.cataFormClass.split(/\s+/).forEach(c => c && f.classList.add(c)));
+  // Partner gate (user, 2026-11-01): Submit a Program and Share an Event open with "which Alliance partner?"; the rest of the form
+  // (everything after the gate) appears once a partner is chosen, and "not a partner yet" shows the Join the Network note instead.
+  // Display is set inline: on Webflow the builder drops [hidden], and .form__group{display:grid} would outrank it anyway.
+  document.querySelectorAll('[data-partner-gate]').forEach(gate => {
+    const form = gate.closest('form'), sel = gate.querySelector('[data-partner-select]'), note = gate.querySelector('[data-partner-note]');
+    if (!form || !sel) return;
+    let after = false;
+    const rest = [...form.children].filter(el => { if (el === gate) { after = true; return false; } return after; });
+    const apply = () => {
+      const none = sel.value === '__not-a-partner__', chosen = !!sel.value && !none;
+      if (note) { note.hidden = !none; note.removeAttribute('data-cata-hidden'); note.style.display = none ? '' : 'none'; }
+      rest.forEach(el => { el.style.display = chosen ? '' : 'none'; });
+    };
+    sel.addEventListener('change', apply); apply();
+  });
   // Webflow copy: the builder cuts a select option's label at an ampersand ("Pest" for "Pest & Disease Management") and keeps the
   // value whole, so a label that is the start of its own value takes the value as its label (found live 2026-11-01).
   document.querySelectorAll('select option').forEach(o => { const v = o.value, t = o.textContent; if (v && v !== t && v.includes('&') && v.startsWith(t.trim())) o.textContent = v; });
