@@ -3,6 +3,9 @@
   // Webflow copy: the builder drops the hidden attribute; export_webflow.py carries it as data-cata-hidden.
   document.querySelectorAll('[data-cata-hidden]').forEach(el => { el.hidden = true; el.removeAttribute('data-cata-hidden'); });
   document.querySelectorAll('[placeholder="Example text"]').forEach(el => el.removeAttribute('placeholder'));  // the Webflow builder's default placeholder on every field it creates
+  // Webflow copy: the builder drops a form's own classes (.form, .form--long, .signup, .eo-form, .eo-quick), so the rows stacked with no
+  // gap; export_webflow.py carries them as data-cata-form-class (found live 2026-11-01).
+  document.querySelectorAll('form[data-cata-form-class]').forEach(f => f.dataset.cataFormClass.split(/\s+/).forEach(c => c && f.classList.add(c)));
   // Webflow copy: the builder cuts a select option's label at an ampersand ("Pest" for "Pest & Disease Management") and keeps the
   // value whole, so a label that is the start of its own value takes the value as its label (found live 2026-11-01).
   document.querySelectorAll('select option').forEach(o => { const v = o.value, t = o.textContent; if (v && v !== t && v.includes('&') && v.startsWith(t.trim())) o.textContent = v; });

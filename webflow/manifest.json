@@ -27,7 +27,7 @@
    "newsletter": false,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 56323
+   "bytes": 56390
   },
   {
    "url": "/innovation-grants/",
@@ -96,7 +96,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 17063
+   "bytes": 17100
   },
   {
    "url": "/events-opportunities/share/",
@@ -116,7 +116,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 5612
+   "bytes": 5648
   },
   {
    "url": "/stories/",
@@ -146,7 +146,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 2029
+   "bytes": 2084
   },
   {
    "url": "/join/",
@@ -161,7 +161,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 10893
+   "bytes": 10932
   },
   {
    "url": "/referral/",
@@ -181,7 +181,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 21087
+   "bytes": 21126
   },
   {
    "url": "/stories/share/",
@@ -196,7 +196,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 6102
+   "bytes": 6141
   },
   {
    "url": "/programs/submit/",
@@ -211,7 +211,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 9920
+   "bytes": 9959
   },
   {
    "url": "/accessibility/",
