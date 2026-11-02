@@ -27,7 +27,22 @@
    "newsletter": false,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 56390
+   "bytes": 56356
+  },
+  {
+   "url": "/about/",
+   "webflow_path": "/about",
+   "slug": "about",
+   "kind": "static",
+   "title": "About — California AgTech Alliance",
+   "description": "The California AgTech Alliance is a statewide network of universities, colleges, public agencies, industry groups, and community organizations working together so that agricultural innovation and opportunity reach every region of California.",
+   "fragment": "pages/about.html",
+   "classes_css": "pages/about.css",
+   "data": [],
+   "newsletter": true,
+   "has_form": false,
+   "inline_scripts_dropped": 0,
+   "bytes": 19507
   },
   {
    "url": "/innovation-grants/",

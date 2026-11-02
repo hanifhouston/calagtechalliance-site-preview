@@ -1,10 +1,15 @@
 {
-  "built_pages": 121,
+  "built_pages": 122,
   "pages": [
     {
       "url": "/",
       "title": "California AgTech Alliance",
       "section": "home"
+    },
+    {
+      "url": "/about/",
+      "title": "About",
+      "section": "about"
     },
     {
       "url": "/innovation-grants/",
