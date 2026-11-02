@@ -2,6 +2,7 @@
 (() => {
   // Webflow copy: the builder drops the hidden attribute; export_webflow.py carries it as data-cata-hidden.
   document.querySelectorAll('[data-cata-hidden]').forEach(el => { el.hidden = true; el.removeAttribute('data-cata-hidden'); });
+  document.querySelectorAll('details[data-cata-open]').forEach(d => { d.open = true; d.removeAttribute('data-cata-open'); });  // and the open attribute (About's first outcome, 2026-11-02)
   document.querySelectorAll('[placeholder="Example text"]').forEach(el => el.removeAttribute('placeholder'));  // the Webflow builder's default placeholder on every field it creates
   // Webflow copy: the builder drops a form's own classes (.form, .form--long, .signup, .eo-form, .eo-quick), so the rows stacked with no
   // gap; export_webflow.py carries them as data-cata-form-class (found live 2026-11-01).
