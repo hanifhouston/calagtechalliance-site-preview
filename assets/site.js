@@ -214,6 +214,7 @@
       section.querySelectorAll('[data-flow-phrase]').forEach(p => p.classList.toggle('is-on', +p.dataset.flowPhrase === i));
     };
     flow.querySelectorAll('[data-flow-card]').forEach(card => card.addEventListener('click', () => pick(+card.dataset.flowCard)));
+    flow.querySelectorAll('a[data-flow-pick]').forEach(a => a.addEventListener('click', e => e.preventDefault()));  // the Webflow copy's title buttons are <a href="#">: no jump to the top (About, 2026-11-02)
   });
   const today = new Date(); today.setHours(0, 0, 0, 0);  // the guided search counts upcoming listings from today
   // Countdown tile (mirrors site_builder/events.py countdown_tile), colored by urgency: more than 10 days out, the date
