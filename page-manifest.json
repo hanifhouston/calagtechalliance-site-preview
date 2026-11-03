@@ -1,5 +1,5 @@
 {
-  "built_pages": 122,
+  "built_pages": 123,
   "pages": [
     {
       "url": "/",
@@ -95,6 +95,11 @@
       "url": "/programs/",
       "title": "Program Directory",
       "section": "resources"
+    },
+    {
+      "url": "/stories/start-with-growers-what-convening-participants-told-us/",
+      "title": "Start With Growers: What Convening Participants Told Us",
+      "section": "stories"
     },
     {
       "url": "/stories/how-ducc-connects-drone-training-to-career-opportunities/",
