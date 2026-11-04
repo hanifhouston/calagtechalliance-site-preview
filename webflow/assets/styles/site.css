@@ -1735,7 +1735,7 @@ a.ig-bar__label:hover{color:var(--cata-teal);text-decoration:underline}
 .iga-note p{margin:0 auto;padding-top:12px;padding-bottom:12px;font-family:var(--font-mono);font-size:12px;line-height:1.5;letter-spacing:.12em;text-transform:uppercase;color:var(--cata-navy)}
 .iga-link{color:var(--cata-teal);font-weight:600}
 .iga-link.is-pending{outline:0;text-decoration:underline dashed;text-underline-offset:4px}
-.iga-updated{margin-left:.3em;color:#b42318;font-weight:600;white-space:nowrap}  /* the red Updated note beside the narrative template link (Julián, 2026-11-04); a margin, not a space, since Webflow trims a span's leading space */
+.iga-updated{color:#b42318;font-weight:600}  /* the red asterisk after the narrative template link (2026-11-04) */
 .iga-tbc{display:inline-block;padding:2px 6px;border-radius:4px;background:var(--cata-mint);font-family:var(--font-mono);font-size:11px;line-height:1.4;letter-spacing:.14em;text-transform:uppercase;color:var(--cata-navy)}
 /* Intro: title, lede and dates beside the Before starting card. */
 .iga-intro{background:var(--cata-cream);padding:56px 0 48px;border-bottom:1px solid var(--cata-rule)}
@@ -1757,6 +1757,7 @@ a.ig-bar__label:hover{color:var(--cata-teal);text-decoration:underline}
 .iga-before__list li{padding:9px 0;border-top:1px solid var(--cata-rule)}
 .iga-before__list li:last-child{border-bottom:1px solid var(--cata-rule)}
 .iga-before p.iga-before__q{font-size:14.5px;line-height:1.55}
+.iga-before p.iga-before__updated{font-size:13px;line-height:1.5;font-weight:600;color:#b42318}  /* *Updated line under Questions (Julián's note, placed by the user 2026-11-04) */
 /* Body: the section index beside the form. */
 .iga-body{background:var(--cata-cream);padding:56px 0 96px}
 .iga-body__inner{display:flex;flex-wrap:wrap;align-items:flex-start;gap:40px 64px}
