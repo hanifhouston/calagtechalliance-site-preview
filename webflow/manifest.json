@@ -27,7 +27,7 @@
    "newsletter": false,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 56331
+   "bytes": 58696
   },
   {
    "url": "/about/",
@@ -57,7 +57,7 @@
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 25742
+   "bytes": 24917
   },
   {
    "url": "/innovation-grants/apply/",
@@ -72,7 +72,7 @@
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 3558
+   "bytes": 3612
   },
   {
    "url": "/innovation-grants/service-providers/",
