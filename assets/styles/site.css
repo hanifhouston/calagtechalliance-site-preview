@@ -1665,13 +1665,13 @@ a.ig-bar__label:hover{color:var(--cata-teal);text-decoration:underline}
 .ig-elig li{display:flex;gap:14px;padding:18px 0;border-top:1px solid var(--cata-rule);font-size:17px;line-height:1.55;color:var(--cata-navy)}
 .ig-elig strong{font-weight:700}
 .ig-check{width:14px;height:14px;flex:none;margin-top:6px;color:var(--cata-teal)}
-/* California nexus (2026-11-04): the RFA's three requirements in a cream box under the eligibility heading. */
-.ig-nexus{display:flex;flex-direction:column;gap:14px;padding:24px 28px;background:var(--cata-cream);border-radius:8px}
+/* California nexus (2026-11-04): the RFA's three requirements in a full-width cream box under the eligibility split (user). */
+.ig-split--elig+.ig-nexus{margin-top:56px}
+.ig-nexus{display:flex;flex-direction:column;gap:14px;padding:32px 36px;background:var(--cata-cream);border-radius:8px}
 .ig-nexus__label{margin:0;font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--cata-teal-deep)}
-.ig-nexus__lead{margin:0;font-family:var(--font-display);font-weight:700;font-size:20px;line-height:1.3;letter-spacing:-.01em;color:var(--cata-navy)}
-.ig-nexus__list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
-.ig-nexus__list li{position:relative;margin:0;padding-left:20px;font-size:16px;line-height:1.5;color:var(--cata-navy)}
-.ig-nexus__list li::before{content:"";position:absolute;left:0;top:.6em;width:8px;height:8px;border-radius:999px;background:var(--cata-teal)}
+.ig-nexus__lead{margin:0;font-family:var(--font-display);font-weight:700;font-size:22px;line-height:1.3;letter-spacing:-.01em;color:var(--cata-navy)}
+.ig-nexus__list{list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px 40px}
+.ig-nexus__list li{position:relative;margin:0;padding:16px 0 0;border-top:2px solid var(--cata-navy);font-size:16px;line-height:1.5;color:var(--cata-navy)}
 /* Review and selection (navy): the three review steps beside the criteria card with point bars. */
 .ig-sel__mark{position:absolute;right:-120px;top:-100px;width:440px;opacity:.06;pointer-events:none}
 .ig-sel{position:relative;display:flex;flex-wrap:wrap;align-items:flex-start;gap:48px 72px}
@@ -1725,6 +1725,8 @@ a.ig-bar__label:hover{color:var(--cata-teal);text-decoration:underline}
   .ig-webinar__label{flex-basis:100%}
   .ig-webinar__text{flex-basis:100%;font-size:16px}
   .ig-fund{padding:24px}
+  .ig-nexus{padding:24px}
+  .ig-split--elig+.ig-nexus{margin-top:40px}
   .ig-crit{padding:24px}
   .ig-svc{padding:28px 24px 24px}
   .ig-svc__list li{font-size:16px}
