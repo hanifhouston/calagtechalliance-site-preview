@@ -1734,7 +1734,7 @@ a.ig-bar__label:hover{color:var(--cata-teal);text-decoration:underline}
 .iga-note p{margin:0 auto;padding-top:12px;padding-bottom:12px;font-family:var(--font-mono);font-size:12px;line-height:1.5;letter-spacing:.12em;text-transform:uppercase;color:var(--cata-navy)}
 .iga-link{color:var(--cata-teal);font-weight:600}
 .iga-link.is-pending{outline:0;text-decoration:underline dashed;text-underline-offset:4px}
-.iga-updated{color:#b42318;font-weight:600;white-space:nowrap}  /* the red Updated note beside the narrative template link (Julián, 2026-11-04) */
+.iga-updated{margin-left:.3em;color:#b42318;font-weight:600;white-space:nowrap}  /* the red Updated note beside the narrative template link (Julián, 2026-11-04); a margin, not a space, since Webflow trims a span's leading space */
 .iga-tbc{display:inline-block;padding:2px 6px;border-radius:4px;background:var(--cata-mint);font-family:var(--font-mono);font-size:11px;line-height:1.4;letter-spacing:.14em;text-transform:uppercase;color:var(--cata-navy)}
 /* Intro: title, lede and dates beside the Before starting card. */
 .iga-intro{background:var(--cata-cream);padding:56px 0 48px;border-bottom:1px solid var(--cata-rule)}
