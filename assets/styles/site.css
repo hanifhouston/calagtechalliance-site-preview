@@ -1706,8 +1706,6 @@ a.ig-bar__label:hover{color:var(--cata-teal);text-decoration:underline}
 .ig-tl__date{font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--cata-teal)}
 .ig-tl__what{font-weight:600;font-size:16px;line-height:1.4;color:var(--cata-navy)}
 .ig-tl__next{align-self:flex-start;padding:4px 10px;border-radius:999px;background:var(--cata-lime);color:var(--cata-navy);font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
-/* Second cohort and project period, side by side under the first cohort (2026-11-04). */
-.ig-tl-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:48px 56px}
 /* Apply (mint). */
 .ig-apply{display:flex;flex-direction:column;align-items:flex-start;gap:22px}
 .ig-apply .ig-h2{max-width:880px}
