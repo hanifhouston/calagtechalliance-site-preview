@@ -1901,6 +1901,8 @@ a.ig-bar__label:hover{color:var(--cata-teal);text-decoration:underline}
 .igp-intake{background:var(--cata-cream);padding:72px 0 96px;scroll-margin-top:var(--header-h)}
 .igp-intake__head{display:flex;flex-direction:column;gap:20px;padding-bottom:40px}
 .igp-intake__lede{margin:0;max-width:66ch;font-size:17px;line-height:1.6;color:var(--cata-navy)}
+.igp-intake__lede a{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--cata-navy);text-decoration:underline;text-underline-offset:3px}  /* the new-tab link in the startup form's intro (2026-11-04) */
+.igp-intake__lede .arr{width:12px;height:12px}
 .igp-notice{margin:0;max-width:66ch;padding:16px 20px;background:#fff;border:1px solid var(--cata-rule);border-radius:8px;font-weight:600;font-size:16px;line-height:1.55;color:var(--cata-navy)}
 .igp-preview{margin:0;font-family:var(--font-mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--cata-ink-2)}
 .igp-check{display:flex;align-items:flex-start;gap:14px;padding:16px 18px;border:1px solid var(--cata-ink-3);border-radius:8px;cursor:pointer}
