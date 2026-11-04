@@ -1740,9 +1740,7 @@ a.ig-bar__label:hover{color:var(--cata-teal);text-decoration:underline}
 .iga-intro{background:var(--cata-cream);padding:56px 0 48px;border-bottom:1px solid var(--cata-rule)}
 .iga-intro__inner{display:flex;flex-wrap:wrap;align-items:flex-start;gap:40px 72px}
 .iga-intro__main{flex:7 1 480px;display:flex;flex-direction:column;gap:20px}
-.iga-back{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px;color:var(--cata-teal);text-decoration:none}
-.iga-back:hover{text-decoration:underline}
-.iga-back__icon{width:13px;height:13px}
+.iga-intro .eyebrow{margin:0;font-size:12px;letter-spacing:.14em}  /* For startups, as .igp-intro .eyebrow on the provider page */
 .iga-intro h1{margin:0;font-size:clamp(38px,4.6vw,60px);line-height:1.02;letter-spacing:-.02em;color:var(--cata-navy)}
 .iga-intro__lede{margin:0;max-width:62ch;font-size:18px;line-height:1.6;color:var(--cata-navy)}
 .iga-dates{margin:0;display:flex;flex-wrap:wrap;gap:12px 40px}
