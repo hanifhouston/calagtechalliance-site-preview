@@ -27,7 +27,7 @@
    "newsletter": false,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 58696
+   "bytes": 56444
   },
   {
    "url": "/about/",
@@ -131,7 +131,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 13119
+   "bytes": 13143
   },
   {
    "url": "/stories/",
@@ -196,7 +196,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 21126
+   "bytes": 21138
   },
   {
    "url": "/stories/share/",
@@ -226,7 +226,7 @@
    "newsletter": true,
    "has_form": true,
    "inline_scripts_dropped": 0,
-   "bytes": 18025
+   "bytes": 18049
   },
   {
    "url": "/accessibility/",
@@ -461,7 +461,7 @@
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 5313
+   "bytes": 5314
   },
   {
    "url": "/directory/agstep/",
@@ -506,7 +506,7 @@
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 4130
+   "bytes": 5121
   },
   {
    "url": "/directory/bay-area-council/",
@@ -611,7 +611,7 @@
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 6097
+   "bytes": 6504
   },
   {
    "url": "/directory/california-governors-office-of-business-and-economic-development-go-biz/",
@@ -656,7 +656,7 @@
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 7670
+   "bytes": 8034
   },
   {
    "url": "/directory/center-for-land-based-learning/",
@@ -716,7 +716,7 @@
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 5652
+   "bytes": 5490
   },
   {
    "url": "/directory/city-of-woodland/",
@@ -858,15 +858,15 @@
    "webflow_path": "/directory/f3-activated-alliance",
    "slug": "directory/f3-activated-alliance",
    "kind": "template",
-   "title": "F3 Activated Alliance — California AgTech Alliance",
-   "description": "F3 Activated Alliance connects the California AgTech Alliance with the Farms Food Future (F3) Initiative, a coalition working to make California&#x27;s Central Valley a competitive, sustainable and inclusive agtech hub.",
+   "title": "F3 (Farms Food Future) Initiative — California AgTech Alliance",
+   "description": "The F3 (Farms Food Future) Initiative is a coalition working to make California&#x27;s Central Valley a competitive, sustainable and inclusive agtech hub.",
    "fragment": "pages/directory__f3-activated-alliance.html",
    "classes_css": "pages/directory__f3-activated-alliance.css",
    "data": [],
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 3333
+   "bytes": 13638
   },
   {
    "url": "/directory/f3-innovate/",
@@ -881,7 +881,7 @@
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 10240
+   "bytes": 10057
   },
   {
    "url": "/directory/f3-local/",
@@ -896,7 +896,7 @@
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 9981
+   "bytes": 9859
   },
   {
    "url": "/directory/farmhand-ventures/",
@@ -1121,7 +1121,7 @@
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 8247
+   "bytes": 8846
   },
   {
    "url": "/directory/monterey-bay-economic-partnership/",
@@ -1466,7 +1466,7 @@
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 6017
+   "bytes": 5369
   },
   {
    "url": "/directory/shasta-valley-resource-conservation-district/",
@@ -1601,7 +1601,7 @@
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 5270
+   "bytes": 5997
   },
   {
    "url": "/directory/uc-davis/",
@@ -1691,7 +1691,7 @@
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 4518
+   "bytes": 4904
   },
   {
    "url": "/directory/uplift-central-coast/",
@@ -1699,14 +1699,14 @@
    "slug": "directory/uplift-central-coast",
    "kind": "template",
    "title": "Uplift Central Coast — California AgTech Alliance",
-   "description": "Uplift Central Coast brings residents, businesses, workforce partners, public agencies, and community organizations together to develop an inclusive and resilient regional economy.",
+   "description": "Uplift Central Coast is a six-county coalition convened by REACH, the Monterey Bay Economic Partnership (MBEP), and the Economic Development Collaborative (EDC).",
    "fragment": "pages/directory__uplift-central-coast.html",
    "classes_css": "pages/directory__uplift-central-coast.css",
    "data": [],
    "newsletter": false,
    "has_form": false,
    "inline_scripts_dropped": 0,
-   "bytes": 5029
+   "bytes": 6079
   },
   {
    "url": "/directory/ventura-county-farm-to-school/",
